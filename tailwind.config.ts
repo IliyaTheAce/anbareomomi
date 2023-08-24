@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         IranSans: ["IranSans", "sans-serif"],
         Yekan: ["Yekan", "sans-serif"],
+        Yeseva: ['Yeseva' , "sans-serif"]
       },
     },
   },

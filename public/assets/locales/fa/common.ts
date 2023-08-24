@@ -6,6 +6,8 @@ const Farsi = {
     accessories: 'اکسسوری',
     gifts: 'هدیه',
     wholesale: 'فروش عمده',
+    inspiration:  'وبلاگ',
+    doctor:  'دکتر بائو',
   },
 };
 

@@ -24,6 +24,11 @@
   font-style: normal;
 }
 
+@font-face{
+  font-family: Yeseva;
+  src: url("/assets/font/YesevaOne.ttf") format('ttf')
+}
+
 html,
 body,
 .root {
