@@ -28,7 +28,7 @@ export default async function RootLayout({
     <html lang={lang} dir={`${lang === 'en' ? 'ltr' : 'rtl'}`}>
       <body >
       <NavBar data={dict}/>
-      <main className="mt-[126px] relative">
+      <main className="mt-[58px] md:mt-[126px] relative">
         {children}
         </main>
         </body>
