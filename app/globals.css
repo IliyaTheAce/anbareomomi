@@ -1,27 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~@flaticon/flaticon-uicons/css/all/all";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: Yekan;
+  src: url("/assets/fonts/Yekan.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/Yekan.woff2") format("woff2"),
+    url("/assets/fonts/Yekan.woff") format("woff"),
+    url("/assets/fonts/Yekan.ttf") format("truetype"),
+    url("/assets/fonts/Yekan.svg#Yekan") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: IranSans;
+  src: url("/assets/fonts/sans.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/sans.woff") format("woff"),
+    url("/assets/fonts/sans.ttf") format("truetype"),
+    url("/assets/fonts/sans.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html,
+body,
+.root {
+  font-family: IranSans, sans-serif;
 }
