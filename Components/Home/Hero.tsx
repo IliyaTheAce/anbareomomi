@@ -12,25 +12,22 @@ export default function Hero({
   data: { hero: { title: string; buttonText: string; content: string } };
 }) {
   return (
-    <section className="w-full overflow-x-hidden flex justify-center flex-col">
+    <section className="w-full overflow-x-hidden flex justify-center flex-col relative h-screen">
       <Image
         src={"/assets/Images/hero-bg.avif"}
         alt="plant background"
         width={0}
         height={0}
-        sizes="100vw"
-        className="h-[248px] md:h-auto w-[120%] max-w-none"
-        // style={{width:'120%'}}
+        sizes="100vh"
+        className="hero-img w-auto  h-[248px] md:mb-14 md:h-[650px]"
       />
       <div
         className={`flex justify-center items-center gap-7 flex-col py-5
          bg-[#dec048] bg-opacity-[85%] md:absolute top-0 h-full
-         right-[7%] font-Yeseva text-white  px-10  lg:w-1/3 md:w-1/2 
+         right-[7%]  text-white  px-10  lg:w-1/3 md:w-1/2 
            `}
       >
-        <div className="text-4xl font-semibold font-Yeseva">
-          {data.hero.title}
-        </div>
+        <div className="text-4xl font-semibold">{data.hero.title}</div>
         <div className="text-md font-light">{data.hero.content}</div>
         <button className="w-full rounded-full bg-[#443A2C] flex justify-center items-center py-3">
           {data.hero.buttonText}

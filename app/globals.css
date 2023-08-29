@@ -26,11 +26,13 @@
 
 @font-face{
   font-family: Yeseva;
-  src: url("/assets/font/YesevaOne.ttf") format('ttf')
+  src: url("/assets/font/yeseva-one.woff2") format('woff2'),
+  url("/assets/font/yeseva-one.woff") format('woff'),
+  url("/assets/font/yeseva-one.ttf") format('ttf')
 }
 
-html,
-body,
-.root {
-  font-family: IranSans, sans-serif;
+
+.hero-img {
+width: auto;
+
 }
