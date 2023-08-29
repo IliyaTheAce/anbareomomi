@@ -9,9 +9,10 @@ export default async function Home({params}: {params:{lang:string}}) {
 
   return (
     <main className="">
+    
       <Hero data={dict}/>
       <TopSellers data={dict} />
-      بسم الله الرحمن الرحیم
+      
     </main>
   )
 }

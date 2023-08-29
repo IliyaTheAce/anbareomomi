@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        IranSans: ["IranSans", "sans-serif"],
-        Yekan: ["Yekan", "sans-serif"],
+        IranSans: ["IranSans"],
+        Poppins: ["Poppins"],
+        Yekan: ["Yekan"],
         Yeseva: ['Yeseva']
       },
     },
