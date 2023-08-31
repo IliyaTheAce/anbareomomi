@@ -20,10 +20,28 @@ const English = {
     buttonText: "Shop all plants",
     font: "font-Yeseva",
   },
-  topseller: { header: "Our Top Stars", buttonText: "View All Our Plants" },
+  topseller: {
+    header: "Our Top Stars",
+    buttonText: "View All Our Plants",
+    font: "font-Yeseva",
+  },
   popularCategories: {
     header: "Popular categories",
-    categories: [{ image: "", id: "", title: "" }],
+    font: "font-Yeseva",
+    categories: [
+      {
+        image: "/assets/images/popularCategories/1.jpg",
+        id: "1",
+        title: "HousePlants",
+      },
+      { image: "/assets/images/popularCategories/2.jpg", id: "2", title: "Pots" },
+      {
+        image: "/assets/images/popularCategories/3.jpg",
+        id: "3",
+        title: "Accessories",
+      },
+      { image: "/assets/images/popularCategories/4.jpg", id: "4", title: "Care" },
+    ],
   },
 };
 

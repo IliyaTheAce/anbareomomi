@@ -18,7 +18,8 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
-  src: local("Poppins Regular"), url("/assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
+  src: local("Poppins Regular"),
+    url("/assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -38,7 +39,10 @@
     url("/assets/font/Yesava/yeseva-one.ttf") format("ttf");
 }
 
-
 .hero-img {
   width: auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

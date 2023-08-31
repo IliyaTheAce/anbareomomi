@@ -10,7 +10,7 @@ export default function NavBar({ data }: { data: object }) {
   return (
     <div className="fixed top-0 w-full bg-white z-10">
       <div className=" border-b-[1.5px] border-gray-400 px-4 py-4  flex items-center justify-center">
-        <div className="w-full flex items-center justify-between 2xl:max-w-none xl:max-w-7xl lg:max-w-5xl md:max-w-3xl">
+        <div className="w-full flex items-center justify-between 2xl:max-w-none xl:max-w-7xl lg:max-w-6xl md:max-w-4xl whitespace-nowrap">
           <div className="inline-flex gap-3 items-center justify-center">
             <button
               className="md:hidden text-2xl"
@@ -26,9 +26,9 @@ export default function NavBar({ data }: { data: object }) {
               className="w-[50px]"
             />
           </div>
-          <p className="font-Yekan font-lg font-bold">
-          بسم الله الرحمن الرحیم
-          </p>
+          {/*<p className="font-Yekan font-lg font-bold">*/}
+          {/*بسم الله الرحمن الرحیم*/}
+          {/*</p>*/}
           <div className="flex items-start justify-center gap-8 md:text-2xl text-xl text-gray-600">
             <button>
               <i className="fi fi-rr-search flex items-center"></i>
@@ -50,7 +50,7 @@ export default function NavBar({ data }: { data: object }) {
           toggle ? "flex py-4 " : "h-0 md:h-auto md:flex py-0 "
         } overflow-hidden border-b-[1.5px] transition-all border-gray-400 px-4 items-center justify-center`}
       >
-        <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 2xl:max-w-none xl:max-w-7xl lg:max-w-5xl md:max-w-3xl  text-gray-600">
+        <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 2xl:max-w-none xl:max-w-7xl lg:max-w-5xl md:max-w-4xl  text-gray-600">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
             {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.housePlants}</Link>

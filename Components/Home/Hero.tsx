@@ -14,15 +14,15 @@ export default function Hero({
   };
 }) {
   return (
-    <section className="w-full overflow-x-hidden flex justify-start items-start flex-col relative h-screen">
-      <div className="overflow-hidden w-full h-[93%] relative">
-      <Image
-        src={"/assets/Images/hero-bg.avif"}
-        alt="plant background"
-        layout='fill'
-        objectFit={"cover"}
-        priority
-      />
+    <section className="w-full overflow-x-hidden flex justify-start items-start flex-col relative lg:h-screen">
+      <div className="overflow-hidden w-full h-[93%] lg:min-h-auto min-h-[500px] relative">
+        <Image
+          src={"/assets/Images/hero-bg.avif"}
+          alt="plant background"
+          layout="fill"
+          objectFit={"cover"}
+          priority
+        />
       </div>
       <div
         className={`flex justify-center items-center gap-7 flex-col py-5
@@ -33,7 +33,9 @@ export default function Hero({
         <div className={`text-5xl  font-semibold ${data.hero.font}`}>
           {data.hero.title}
         </div>
-        <div className={`text-md font-light px-2 ${data.hero.font} text-justify`}>
+        <div
+          className={`text-md font-light px-2 ${data.hero.font} text-justify`}
+        >
           {data.hero.content}
         </div>
         <button className="w-full rounded-full bg-[#443A2C] flex justify-center items-center py-3">

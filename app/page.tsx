@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 
-export default function page({ params }: { params: { lang: string } }) {
+export default function Page() {
   const router = useRouter();
   const PreferedLanguage = localStorage.getItem("PreferedLanguage");
   if (PreferedLanguage) {
