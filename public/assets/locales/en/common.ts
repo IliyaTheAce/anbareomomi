@@ -34,14 +34,27 @@ const English = {
         id: "1",
         title: "HousePlants",
       },
-      { image: "/assets/images/popularCategories/2.jpg", id: "2", title: "Pots" },
+      {
+        image: "/assets/images/popularCategories/2.jpg",
+        id: "2",
+        title: "Pots",
+      },
       {
         image: "/assets/images/popularCategories/3.jpg",
         id: "3",
         title: "Accessories",
       },
-      { image: "/assets/images/popularCategories/4.jpg", id: "4", title: "Care" },
+      {
+        image: "/assets/images/popularCategories/4.jpg",
+        id: "4",
+        title: "Care",
+      },
     ],
+  },
+  Offers: {
+    guarantee: "30 day health guarantee",
+    shipping: "Free shipping from €75",
+    font: "",
   },
 };
 

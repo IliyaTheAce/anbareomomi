@@ -14,7 +14,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
       <Hero data={dict} />
       <TopSellers data={dict} />
       <TopCategories data={dict} />
-      <Offers />
+      <Offers data={dict} />
     </main>
   );
 }

@@ -9,12 +9,12 @@ export default async function TopSellers({
   return (
     <section className="flex flex-col justify-center items-center py-10 w-full relative mt-10 gap-10">
       <div
-        className={`w-full text-center font-bold text-3xl lg:text-6xl ${data.topseller.font}`}
+        className={`w-full text-center font-bold text-3xl lg:text-4xl ${data.topseller.font}`}
       >
         {data.topseller.header}
       </div>
       <div className="flex flex-col gap-4 max-w-[100vw] overflow-x-hidden">
-        <div className="flex overflow-x-auto no-scrollbar gap-4 px-3 md:max-w-[70vw] pb-3">
+        <div className="flex overflow-x-auto overflow-y-hidden no-scrollbar gap-4 px-3 md:max-w-[70vw] pb-3">
           <SmallPlantCard
             name="Adansonii Mint"
             price={29.95}
