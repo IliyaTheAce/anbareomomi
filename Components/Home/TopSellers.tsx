@@ -21,6 +21,7 @@ export default async function TopSellers({
             unit="$"
             type="Monstera"
             image="/assets/Images/pl.avif"
+            inStock={5}
           />
           <SmallPlantCard
             name="Adansonii Mint"

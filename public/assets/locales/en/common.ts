@@ -56,6 +56,15 @@ const English = {
     shipping: "Free shipping from €75",
     font: "",
   },
+  LearnMore: {
+    font: "font-Yeseva",
+    sentences: ["Learn About", "Our teeny-tiny", "Baby plants"],
+  },
+  PlantOfTheMonth: {
+    font: "font-Yeseva",
+    title: "Plant of the month",
+    name: "Philodendron Ring of Fire",
+  },
 };
 
 export default English;

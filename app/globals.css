@@ -39,10 +39,9 @@
     url("/assets/font/Yesava/yeseva-one.ttf") format("ttf");
 }
 
-.hero-img {
-  width: auto;
+.font-Yeseva{
+  font-family: Yeseva, serif;
 }
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -7,6 +7,7 @@ interface props {
   discount?: number;
   unit: string;
   image: string;
+  inStock?: number;
 }
 
 export default function SmallPlantCard({
@@ -16,26 +17,35 @@ export default function SmallPlantCard({
   discount,
   unit,
   image,
+  inStock,
 }: props) {
   return (
-    <div className="flex-shrink-0 sm:flex-shrink hover:scale-110 transition-all flex flex-col font-semibold relative">
-      <button className="absolute w-7 h-7 top-2 right-2 bg-white rounded-full">
-        <i className="fi fi-rr-heart text-[21px] flex items-center justify-center"></i>
+    <div className="flex-shrink-0 sm:flex-shrink flex flex-col font-semibold relative">
+      <button className="absolute w-7 h-7 top-2 right-2 bg-white rounded-full z-[2]">
+        <i className="fi fi-rr-heart text-[20px] flex items-center justify-center"></i>
       </button>
-      <span className={"absolute h-7 w-fit xl:top-[180px] lg:top-[120px] "}>
-        Only 9 in stock
-      </span>
-      <Image
-        alt={name}
-        src={image}
-        //   src={"/assets/Images/pl.avif"}
-        width={0}
-        height={0}
-        sizes="100vw"
-        className={
-          "xl:w-[240px] lg:w-[200px] md:w-[170px] w-[150px] h-auto mb-2"
-        }
-      />
+
+      <div className={"relative hover:scale-110 transition-all"}>
+        {inStock && inStock <= 10 && (
+          <span
+            className={
+              "absolute h-fit w-fit bottom-[10%] bg-black bg-opacity-60 px-2 py-1 text-white text-sm font-light"
+            }
+          >
+            Only {inStock} in stock
+          </span>
+        )}
+        <Image
+          alt={name}
+          src={image}
+          width={0}
+          height={0}
+          sizes="100vw"
+          className={
+            "xl:w-[240px] lg:w-[200px] md:w-[170px] w-[150px] h-auto mb-2 z-[1]"
+          }
+        />
+      </div>
       <h3 className="text-md">{name}</h3>
       <h4 className="text-md font-light">{type}</h4>
       <div className="text-sm">
