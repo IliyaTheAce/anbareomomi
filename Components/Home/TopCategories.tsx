@@ -19,12 +19,12 @@ export default async function TopCategories({
       >
         {data.popularCategories.header}
       </div>
-      <div className="grid lg:grid-cols-4 grid-cols-2 gap-6 max-w-[1000px] overflow-hidden">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-2 md:gap-4 max-w-[1270px] overflow-hidden">
         {data.popularCategories.categories.map((item) => {
           return (
-            <div className="relative hover:scale-110 transition-all duration-400">
+            <div className="relative">
               <h3
-                className={`absolute bottom-2 ${
+                className={`absolute bottom-2 z-[2] ${
                   data.configuration.dir === "ltr" ? "left-2" : "right-2"
                 } bg-white px-3 py-2 font-semibold ${
                   data.popularCategories.font
@@ -38,7 +38,7 @@ export default async function TopCategories({
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-auto h-auto "
+                className="w-auto h-auto hover:scale-110 transition-all duration-400 z-[1]"
               />
             </div>
           );
