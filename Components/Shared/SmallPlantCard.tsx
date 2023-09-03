@@ -19,9 +19,12 @@ export default function SmallPlantCard({
 }: props) {
   return (
     <div className="flex-shrink-0 sm:flex-shrink hover:scale-110 transition-all flex flex-col font-semibold relative">
-      <button className="absolute w-10 h-10 top-2 right-2 bg-white rounded-full">
-        <i className="fi fi-rr-heart text-[27px] flex items-center justify-center"></i>
+      <button className="absolute w-7 h-7 top-2 right-2 bg-white rounded-full">
+        <i className="fi fi-rr-heart text-[21px] flex items-center justify-center"></i>
       </button>
+      <span className={"absolute h-7 w-fit xl:top-[180px] lg:top-[120px] "}>
+        Only 9 in stock
+      </span>
       <Image
         alt={name}
         src={image}
