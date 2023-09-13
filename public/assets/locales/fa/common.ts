@@ -12,13 +12,18 @@ const Farsi = {
     wholesale: "فروش عمده",
     inspiration: "وبلاگ",
     doctor: "دکتر بائو",
+    otherLang: {
+      url: "/en",
+      title: "En",
+    },
   },
   hero: {
-    title: "Your online shop for houseplants and more!",
+    title: "فروشگاه آنلاین بائولند برای ارائه گیاهان آپارتمانی و خاص!",
     content:
-      "PLNTS.com is your one-stop shop for all plant related goodness. It’s a place to learn how to become the best possible plant parent and connect with other plant lovers throughout Europe",
-    buttonText: "Shop all plants",
+      "baoland.ir فروشگاه تکی شما برای همه خوبی های مربوط به گیاهان است. این مکانی برای یادگیری چگونگی تبدیل شدن به بهترین والد گیاهی ممکن و ارتباط با دیگر دوستداران گیاهان در سراسر ایران است",
+    buttonText: "فروش همه گیاهان",
     font: "font-IranSans",
+    threeHeader: ["دنیای سبز", "مینیاتوری در", "قاب خانه شما"],
   },
   topseller: {
     header: "محصولات پرفروش",
@@ -55,6 +60,15 @@ const Farsi = {
     guarantee: "30 روز تضمین سلامت",
     shipping: "ارسال رایگاه از 100 هزار تومان",
     font: "font-IranSans",
+  },
+  LearnMore: {
+    font: "font-IranSans",
+    sentences: ["در مورد گیاهان", "مینیاتوری ما", "بیاموزید"],
+  },
+  PlantOfTheMonth: {
+    font: "font-IranSans",
+    title: "گیاه منتخب ماه",
+    name: "فیلودندرون کنگره‌ای",
   },
 };
 

@@ -4,7 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function NavBar({ data }: { data: object }) {
+export default function NavBar({
+  data,
+}: {
+  data: {
+    navbar: {
+      housePlants: string;
+      pots: string;
+      care: string;
+      doctor: string;
+      inspiration: string;
+      wholesale: string;
+      gifts: string;
+      accessories: string;
+      otherLang: {
+        url: string;
+        title: string;
+      };
+    };
+  };
+}) {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -19,7 +38,7 @@ export default function NavBar({ data }: { data: object }) {
               <i className="fi fi-rr-menu-burger flex items-center"></i>
             </button>
             <Image
-              src={"/assets/Images/logo.svg"}
+              src={"/assets/Images/Logo.png"}
               alt="Logo"
               width={145}
               height={35}
@@ -52,25 +71,19 @@ export default function NavBar({ data }: { data: object }) {
       >
         <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 2xl:max-w-none xl:max-w-7xl lg:max-w-5xl md:max-w-4xl  text-gray-600">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.housePlants}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.pots}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.care}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.accessories}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.gifts}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.wholesale}</Link>
           </div>
           <div className="flex flex-col md:flex-row justify-center gap-6 items-start md:items-center">
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.inspiration}</Link>
-            {/* @ts-ignore */}
             <Link href={"#"}>{data.navbar.doctor}</Link>
-            <Link href={"#"}>En</Link>
+            <Link href={data.navbar.otherLang.url}>
+              {data.navbar.otherLang.title}
+            </Link>
           </div>
         </div>
       </nav>

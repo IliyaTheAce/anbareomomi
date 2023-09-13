@@ -12,6 +12,10 @@ const English = {
     wholesale: "Wholesale",
     inspiration: "inspiration",
     doctor: "Doctor Bao",
+    otherLang: {
+      url: "/fa",
+      title: "فارسی",
+    },
   },
   hero: {
     title: "Your online shop for houseplants and more!",
@@ -19,6 +23,7 @@ const English = {
       "PLNTS.com is your one-stop shop for all plant related goodness. It’s a place to learn how to become the best possible plant parent and connect with other plant lovers throughout Europe",
     buttonText: "Shop all plants",
     font: "font-Yeseva",
+    threeHeader: ["Touching the", "Heart of all", "Plants lover"],
   },
   topseller: {
     header: "Our Top Stars",

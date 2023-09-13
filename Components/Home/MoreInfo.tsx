@@ -4,6 +4,9 @@ export default function MoreInfo({
   data,
 }: {
   data: {
+    configuration: {
+      dir: string;
+    };
     LearnMore: {
       font: string;
       sentences: string[];
@@ -23,25 +26,24 @@ export default function MoreInfo({
         objectFit={"cover"}
       />
       <div
-        className={
-          "bottom-[10%] left-[7%] absolute z-1 flex flex-col gap-1 font-bold md:text-xl text-md  lg:text-4xl"
-        }
+        className={`bottom-[10%] ${
+          data.configuration.dir === "rtl" ? "right-[7%]" : "left-[7%]"
+        } absolute z-1 flex flex-col gap-1 font-bold md:text-xl text-md  lg:text-4xl`}
       >
-        <h2
-          className={`bg-white bg-opacity-90 p-3 md:p-4 w-fit ${data.LearnMore.font}`}
-        >
-          {data.LearnMore.sentences[0]}
-        </h2>
-        <h2
-          className={`bg-white bg-opacity-90 p-3 md:p-4 w-fit ${data.LearnMore.font}`}
-        >
-          {data.LearnMore.sentences[1]}
-        </h2>
-        <h2
-          className={`bg-black bg-opacity-90 p-3 md:p-4 w-fit text-white ${data.LearnMore.font}`}
-        >
-          {data.LearnMore.sentences[2]}
-        </h2>
+        {data.LearnMore.sentences.map((sentence, index) => (
+          <h2
+            key={index + "MoreInfo"}
+            className={` bg-opacity-90 p-3 md:p-6 w-fit ${
+              data.LearnMore.font
+            } ${
+              index === data.LearnMore.sentences.length - 1
+                ? "text-white bg-black"
+                : "bg-white"
+            }`}
+          >
+            {sentence}
+          </h2>
+        ))}
       </div>
     </section>
   );

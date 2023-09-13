@@ -10,7 +10,13 @@ export default function Hero({
   data,
 }: {
   data: {
-    hero: { title: string; buttonText: string; content: string; font: string };
+    hero: {
+      title: string;
+      buttonText: string;
+      content: string;
+      font: string;
+      threeHeader: string[];
+    };
   };
 }) {
   return (
@@ -25,12 +31,11 @@ export default function Hero({
         />
       </div>
       <div
-        className={`flex justify-center items-center gap-7 flex-col py-5
-         bg-[#dec048] bg-opacity-[85%] md:absolute top-0 h-full
-         right-[7%]  text-white  px-10  md:w-[470px] xl:w-[550px]
-           `}
+        className={
+          "flex justify-center items-center gap-7 flex-col py-5 bg-[#c96b1e] bg-opacity-[85%] md:absolute top-0 h-full right-[7%] text-white px-10 md:w-[470px] xl:w-[550px]"
+        }
       >
-        <div className={`text-5xl  font-semibold ${data.hero.font}`}>
+        <div className={`text-4xl  font-semibold ${data.hero.font}`}>
           {data.hero.title}
         </div>
         <div
@@ -47,21 +52,18 @@ export default function Hero({
           "top-[25%] md:top-auto md:bottom-[10%] left-[7%] absolute z-1 flex flex-col gap-1 font-bold md:text-2xl text-3xl  lg:text-4xl"
         }
       >
-        <h2
-          className={`bg-white bg-opacity-90 p-3 md:p-6 w-fit ${data.hero.font}`}
-        >
-          Touching the{" "}
-        </h2>
-        <h2
-          className={`bg-white bg-opacity-90 p-3 md:p-6 w-fit ${data.hero.font}`}
-        >
-          Heart of all
-        </h2>
-        <h2
-          className={`bg-black bg-opacity-90 p-3 md:p-6 w-fit text-white ${data.hero.font}`}
-        >
-          Plants lover{" "}
-        </h2>
+        {data.hero.threeHeader.map((item, index) => (
+          <h2
+            key={index}
+            className={` bg-opacity-90 p-3 md:p-6 w-fit ${data.hero.font} ${
+              index === data.hero.threeHeader.length - 1
+                ? "text-white bg-black"
+                : "bg-white"
+            }`}
+          >
+            {item}
+          </h2>
+        ))}
       </div>
     </section>
   );
