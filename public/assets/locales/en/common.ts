@@ -1,4 +1,8 @@
 const English = {
+  metaData: {
+    title: "Baoland",
+    description: "Paradise of the plants",
+  },
   configuration: {
     dir: "ltr",
     bodyFont: "Poppins",

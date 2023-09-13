@@ -1,4 +1,8 @@
 const Farsi = {
+  metaData: {
+    title: "بائولند",
+    description: "سرزمین گیاهان مینیاتوری",
+  },
   configuration: {
     dir: "rtl",
     bodyFont: "Yekan",
