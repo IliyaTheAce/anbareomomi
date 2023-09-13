@@ -29,7 +29,7 @@ export default function SmallPlantCard({
         {inStock && inStock <= 10 && (
           <span
             className={
-              "absolute h-fit w-fit bottom-[10%] bg-black bg-opacity-60 px-2 py-1 text-white text-sm font-light"
+              "absolute h-fit w-fit bottom-[10%] bg-black bg-opacity-60 px-2 py-1 text-white text-xs lg:text-sm font-light"
             }
           >
             Only {inStock} in stock
@@ -42,7 +42,7 @@ export default function SmallPlantCard({
           height={0}
           sizes="100vw"
           className={
-            "xl:w-[240px] lg:w-[200px] md:w-[170px] w-[150px] h-auto mb-2 z-[1]"
+            "xl:w-[200px] lg:w-[160px] md:w-[130px] w-[120px] h-auto mb-2 z-[1]"
           }
         />
       </div>

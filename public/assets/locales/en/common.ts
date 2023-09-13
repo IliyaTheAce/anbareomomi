@@ -70,6 +70,120 @@ const English = {
     title: "Plant of the month",
     name: "Philodendron Ring of Fire",
   },
+  Footer: {
+    groups: [
+      {
+        header: "Shops",
+        img: "/assets/Images/Logo.png",
+        links: [
+          {
+            title: "All Houseplants",
+            url: "#",
+          },
+          {
+            title: "All Baby Houseplants",
+            url: "#",
+          },
+        ],
+      },
+      {
+        header: "Customer service",
+        links: [
+          {
+            title: "Frequently asked questions",
+            url: "#",
+          },
+          {
+            title: "Contact",
+            url: "#",
+          },
+          {
+            title: "Return policy",
+            url: "#",
+          },
+          {
+            title: "Payments",
+            url: "#",
+          },
+          {
+            title: "Transport and delivery",
+            url: "#",
+          },
+          {
+            title: "Guarantee",
+            url: "#",
+          },
+        ],
+      },
+      {
+        header: "About BaoLand",
+        links: [
+          {
+            title: "Giftcard",
+            url: "#",
+          },
+          {
+            title: "About us",
+            url: "#",
+          },
+          {
+            title: "Sustainability",
+            url: "#",
+          },
+          {
+            title: "Meet the creators",
+            url: "#",
+          },
+          {
+            title: "B2b",
+            url: "#",
+          },
+          {
+            title: "Collaborations",
+            url: "#",
+          },
+          {
+            title: "Press",
+            url: "#",
+          },
+          {
+            title: "Job opportunities",
+            url: "#",
+          },
+        ],
+      },
+      {
+        header: "Social media",
+        links: [
+          {
+            title: "Instagram",
+            url: "#",
+          },
+          {
+            title: "Telegram",
+            url: "#",
+          },
+          {
+            title: "Youtube",
+            url: "#",
+          },
+          {
+            title: "Aparat",
+            url: "#",
+          },
+          {
+            title: "#BaoLand",
+            url: "#",
+          },
+        ],
+      },
+    ],
+  },
+  NewRelease: {
+    title: "New Releases",
+    font: "font-Yeseva",
+    buttonText: "Shop all new releases",
+  },
 };
 
 export default English;
