@@ -3,7 +3,12 @@ import Image from "next/image";
 export default function PlantOfTheMonth({
   data,
 }: {
-  data: { PlantOfTheMonth: { font: string; title: string; name: string } };
+  data: {
+    configuration: {
+      dir: string;
+    };
+    PlantOfTheMonth: { font: string; title: string; name: string };
+  };
 }) {
   return (
     <section
@@ -18,9 +23,9 @@ export default function PlantOfTheMonth({
         objectFit={"cover"}
       />
       <div
-        className={
-          "bottom-[10%] left-[7%] absolute z-1 flex flex-col gap-1 font-bold md:text-xl text-md  lg:text-4xl"
-        }
+        className={`bottom-[10%] ${
+          data.configuration.dir === "rtl" ? "right-[7%]" : "left-[7%]"
+        } absolute z-1 flex flex-col gap-1 font-bold md:text-xl text-md  lg:text-4xl`}
       >
         <h2
           className={`bg-white bg-opacity-90 p-3 md:p-4 w-fit ${data.PlantOfTheMonth.font}`}

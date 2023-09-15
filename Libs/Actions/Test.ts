@@ -1,3 +1,4 @@
+"use server";
 import { ConnectToDataBase } from "@/Libs/Mongoose";
 import User from "@/Libs/Models/UserSchema";
 

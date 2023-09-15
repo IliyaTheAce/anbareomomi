@@ -1,4 +1,5 @@
 const English = {
+  lang: "en",
   metaData: {
     title: "Baoland",
     description: "Paradise of the plants",
@@ -20,6 +21,116 @@ const English = {
       url: "/fa",
       title: "فارسی",
     },
+    subHousePlants: [
+      {
+        header: "By Size",
+        items: [
+          {
+            title: "Tubers and seeds",
+            link: "/shop/tubers-and-seeds",
+          },
+          {
+            title: "Baby houseplants (S)",
+            link: "/shop/baby-plants-home",
+          },
+          {
+            title: "Medium houseplants (M, L)",
+            link: "/shop/medium-plants-home",
+          },
+          {
+            title: "Large houseplants (XL, XXL)",
+            link: "/shop/large-plants-home",
+          },
+        ],
+      },
+      {
+        header: "By Plant Family",
+        items: [
+          {
+            title: "Calathea",
+            link: "/shop/calathea",
+          },
+          {
+            title: "Monstera",
+            link: "/shop/monstera",
+          },
+          {
+            title: "Alocasia",
+            link: "/shop/alocasia",
+          },
+          {
+            title: "Philodendron",
+            link: "/shop/philodendron",
+          },
+          {
+            title: "Anthurium",
+            link: "/shop/anthurium",
+          },
+          {
+            title: "Aglaonema",
+            link: "/shop/aglaonema",
+          },
+        ],
+      },
+      {
+        header: "By Placement Area",
+        items: [
+          {
+            title: "Bathroom plants",
+            link: "/shop/bathroom",
+          },
+          {
+            title: "Bedroom plants",
+            link: "/shop/bedroom",
+          },
+          {
+            title: "Livingroom plants",
+            link: "/shop/living-room",
+          },
+          {
+            title: "Office plants",
+            link: "/shop/office",
+          },
+          {
+            title: "Kitchen plants",
+            link: "/shop/kitchen",
+          },
+        ],
+      },
+      {
+        header: "By Characteristic",
+        items: [
+          {
+            title: "Easy houseplants",
+            link: "/shop/easy",
+          },
+          {
+            title: "Animal-friendly houseplants",
+            link: "/shop/animal-friendly",
+          },
+          {
+            title: "Air-purifying houseplants",
+            link: "/shop/air-purify",
+          },
+          {
+            title: "Shade houseplants",
+            link: "/shop/shade",
+          },
+          {
+            title: "Houseplant sets",
+            link: "/shop/sets",
+          },
+          {
+            title: "Hanging plants",
+            link: "/shop/hanging",
+          },
+          {
+            title: "Rare houseplants",
+            link: "/shop/rare",
+          },
+        ],
+      },
+    ],
   },
   hero: {
     title: "Your online shop for houseplants and more!",
@@ -187,6 +298,12 @@ const English = {
     title: "New Releases",
     font: "font-Yeseva",
     buttonText: "Shop all new releases",
+  },
+  seeds: {
+    font: "font-Yeseva",
+    title: "Tubers and seeds",
+    content:
+      "Now, here's a twist - we are talking about tubers and seeds as houseplants! Who says these beauties have to stay in the ground? With a little bit of TLC and some creative flair, you can transform your home into a miniature garden of tubers and seeds. Imagine the satisfaction of growing your own caladium, or watching your seeds germinate into a leafy green wonder.",
   },
 };
 

@@ -8,6 +8,7 @@ interface props {
   unit: string;
   image: string;
   inStock?: number;
+  freeWidth?: boolean;
 }
 
 export default function SmallPlantCard({
@@ -18,6 +19,7 @@ export default function SmallPlantCard({
   unit,
   image,
   inStock,
+  freeWidth,
 }: props) {
   return (
     <div className="flex-shrink-0 sm:flex-shrink flex flex-col font-semibold relative">
@@ -41,9 +43,11 @@ export default function SmallPlantCard({
           width={0}
           height={0}
           sizes="100vw"
-          className={
-            "xl:w-[200px] lg:w-[160px] md:w-[130px] w-[120px] h-auto mb-2 z-[1]"
-          }
+          className={`${
+            freeWidth
+              ? "w-auto"
+              : "xl:w-[200px] lg:w-[160px] md:w-[130px] w-[120px]"
+          } h-auto mb-2 z-[1]`}
         />
       </div>
       <h3 className="text-md">{name}</h3>

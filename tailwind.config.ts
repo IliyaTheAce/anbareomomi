@@ -12,7 +12,7 @@ const config: Config = {
         IranSans: ["IranSans"],
         Poppins: ["Poppins"],
         Yekan: ["Yekan"],
-        Yeseva: ['Yeseva']
+        Yeseva: ["Yeseva"],
       },
     },
   },
