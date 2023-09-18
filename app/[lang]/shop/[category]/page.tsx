@@ -126,7 +126,7 @@ export default async function Shop({
             <div>Showing 1-20 of 21 results</div>
           </div>
           <section
-            className={"grid grid-cols-2 lg:grid-cols-4 gap-2 justify-between"}
+            className={"grid grid-cols-2 lg:grid-cols-4 gap-5 justify-between"}
           >
             <SmallPlantCard
               name="Adansonii Mint"
