@@ -2,6 +2,7 @@ import { getDictionary, localeType } from "@/app/[lang]/Dictionary";
 import Image from "next/image";
 import Link from "next/link";
 import SmallPlantCard from "@/Components/Shared/SmallPlantCard";
+import ShopNav from "@/Components/Shop/ShopNav";
 
 export default async function Shop({
   params,
@@ -46,76 +47,7 @@ export default async function Shop({
           </div>
         </div>
       </section>
-      <nav
-        className={
-          "flex flex-row gap-5 justify-evenly overflow-x-scroll px-8 py-4 bg-gray-300 text-sm font-light no-scrollbar whitespace-nowrap"
-        }
-      >
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          All Plants
-        </Link>{" "}
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Baby Plants
-        </Link>{" "}
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          New Releases
-        </Link>{" "}
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Rare Plants
-        </Link>{" "}
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Pots
-        </Link>{" "}
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Accessories
-        </Link>
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Care Products
-        </Link>
-        <Link
-          href={"#"}
-          className={
-            "text-gray-500 px-3 py-2 border-2 border-opacity-0 hover:border-opacity-100  border-gray-400 rounded-full"
-          }
-        >
-          Gift
-        </Link>
-      </nav>
+      <ShopNav />
       <div className={"w-full flex flex-row gap-6 overflow-x-hidden"}>
         <div>Filters</div>
         <div className={"flex-grow flex flex-col"}>
@@ -126,7 +58,9 @@ export default async function Shop({
             <div>Showing 1-20 of 21 results</div>
           </div>
           <section
-            className={"grid grid-cols-2 lg:grid-cols-4 gap-5 justify-between"}
+            className={
+              "grid grid-cols-2 lg:grid-cols-4 gap-5 justify-between max-w-[1100px]"
+            }
           >
             <SmallPlantCard
               name="Adansonii Mint"
