@@ -21,9 +21,9 @@ export default function NavBar({
         url: string;
         title: string;
       };
-      subHousePlants: [
-        { header: string; items: [{ title: string; link: string }] },
-      ];
+      // subHousePlants: [
+      //   { header: string; items: [{ title: string; link: string }] }
+      // ];
     };
   };
 }) {
@@ -44,18 +44,18 @@ export default function NavBar({
     if (currentOpenedMenu) {
       currentOpenedMenu.current.classList.remove(
         "opacity-100",
-        "pointer-events-auto",
+        "pointer-events-auto"
       );
       currentOpenedMenu.current.classList.add(
         "opacity-0",
-        "pointer-events-none",
+        "pointer-events-none"
       );
       currentOpenedMenu = null;
     }
   };
   const OpenMenu = (
     menu: MutableRefObject<HTMLDivElement>,
-    button: HTMLButtonElement,
+    button: HTMLButtonElement
   ) => {
     if (currentMenuButton) {
       currentMenuButton.classList.remove("underline", "text-gray-500");
@@ -73,11 +73,11 @@ export default function NavBar({
     if (currentOpenedMenu) {
       currentOpenedMenu.current.classList.add(
         "opacity-0",
-        "pointer-events-none",
+        "pointer-events-none"
       );
       currentOpenedMenu.current.classList.remove(
         "opacity-100",
-        "pointer-events-auto",
+        "pointer-events-auto"
       );
       if (currentOpenedMenu === menu) {
         currentOpenedMenu = null;
@@ -90,290 +90,231 @@ export default function NavBar({
     currentOpenedMenu = menu;
   };
   return (
-    <div className="fixed top-0 w-full bg-white z-10">
-      <div className="border-b-[1.5px] border-gray-400 px-4 py-4  flex items-center justify-center">
-        <div className="w-full flex items-center justify-between 2xl:max-w-none xl:max-w-7xl lg:max-w-6xl md:max-w-4xl whitespace-nowrap">
-          <div className="inline-flex gap-3 items-center justify-center">
-            <button
-              className="md:hidden text-2xl"
-              onClick={() => setToggle(!toggle)}
-            >
-              <i className="fi fi-rr-menu-burger flex items-center"></i>
-            </button>
-            <Link href={"/"}>
-              <Image
-                src={"/assets/Images/Logo.png"}
-                alt="Logo"
-                width={145}
-                height={35}
-                className="w-[50px]"
-              />
-            </Link>
-          </div>
-          {/*<p className="font-Yekan font-lg font-bold">*/}
-          {/*بسم الله الرحمن الرحیم*/}
-          {/*</p>*/}
-          <div className="flex items-start justify-center gap-8 md:text-2xl text-xl text-gray-600">
-            <button>
-              <i className="fi fi-rr-search flex items-center"></i>
-            </button>
-            <button>
-              <i className="fi fi-rr-heart flex items-center"></i>
-            </button>
-            <button>
-              <i className="fi fi-rr-shopping-cart flex items-center"></i>
-            </button>
-            <button>
-              <i className="fi fi-rr-user flex items-center"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <nav
-        className={`md:py-4 relative ${
-          toggle ? "flex py-4 " : "h-0 md:h-auto md:flex py-0 "
-        }  border-b-[1.5px] transition-all border-gray-400 px-4 items-center justify-center`}
-      >
-        <div
-          className={`${
-            toggle ? "flex" : "h-0 md:h-auto md:flex"
-          } w-full flex-col md:flex-row items-start md:items-center justify-between gap-6 2xl:max-w-none xl:max-w-7xl lg:max-w-5xl md:max-w-4xl  text-gray-600 overflow-hidden`}
+    <>
+      <div className="fixed top-0 w-full bg-[#343a40] z-10 text-white">
+        <nav
+          className={`md:py-4 relative ${
+            toggle ? "flex py-4 " : "h-0 md:h-auto md:flex py-0 "
+          } transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto`}
         >
+          <Image
+            src={"/assets/images/arta-white.png"}
+            alt={"logo"}
+            width={263}
+            height={80}
+          />
+
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
-            <button
+            <Link
+              href={"/"}
               id={"housePlants"}
               className={"flex gap-1 justify-center items-center"}
-              onClick={(event) => {
-                OpenMenu(houseplantsMenu, event.currentTarget);
-              }}
             >
-              {data.navbar.housePlants}
-            </button>
-            <button
-              id={"pots"}
-              onClick={(event) => {
-                OpenMenu(potsMenu, event.currentTarget);
-              }}
-            >
-              {data.navbar.pots}
-            </button>
-            <button
-              id={"care"}
-              onClick={(event) => {
-                OpenMenu(CareMenu, event.currentTarget);
-              }}
-            >
-              {data.navbar.care}
-            </button>
-            <button
-              id={"accessories"}
-              onClick={(event) => {
-                OpenMenu(AccessoriesMenu, event.currentTarget);
-              }}
-            >
-              {data.navbar.accessories}
-            </button>
-            <Link href={"#"}>{data.navbar.gifts}</Link>
-            <Link href={"#"}>{data.navbar.wholesale}</Link>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center gap-6 items-start md:items-center">
-            <Link href={"#"}>{data.navbar.inspiration}</Link>
-            <Link href={"#"}>{data.navbar.doctor}</Link>
-            <Link
-              href={data.navbar.otherLang.url}
-              onClick={() => {
-                localStorage.setItem(
-                  "PreferedLanguage",
-                  data.navbar.otherLang.url.replace("/", ""),
-                );
-              }}
-            >
-              {data.navbar.otherLang.title}
+              خانه{" "}
             </Link>
           </div>
-        </div>
-        <div
-          className={
-            "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-          }
-          ref={houseplantsMenu}
-        >
-          <div className={"flex flex-wrap gap-10"}>
-            {data.navbar.subHousePlants.map((sub) => {
-              return (
-                <div
-                  className={"flex flex-col gap-3"}
-                  key={sub.header + "house"}
-                >
-                  <h3 className={"font-semibold underline"}>{sub.header}</h3>
-                  <ul>
-                    {sub.items.map((item) => {
-                      return (
-                        <li key={item.title}>
-                          <Link
-                            href={"/" + data.lang + item.link}
-                            onClick={() => CloseMenu()}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
+
+          <div className="flex flex-col md:flex-row justify-center gap-6 items-start md:items-center">
+            <Link
+              href={"tel:+982191031682"}
+              className={
+                "bg-gray-500 px-3 py-2 rounded-md flex items-center gap-3 hover:text-[#c96b1e] transition-all"
+              }
+            >
+              <span>021-91031682</span>
+              <i className="fi fi-rr-phone-call flex items-center"></i>{" "}
+            </Link>
           </div>
-          <div>
-            <Image
-              src={"/assets/Images/navbar/nav-1.jpg"}
-              alt={"HousePlants"}
-              width={0}
-              height={0}
-              sizes={"100%"}
-              className={"w-auto h-auto min-w-[335px]"}
-            />
+          <div
+            className={
+              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
+            }
+            ref={houseplantsMenu}
+          >
+            <div className={"flex flex-wrap gap-10"}>
+              {/*{data.navbar.subHousePlants.map((sub) => {*/}
+              {/*  return (*/}
+              {/*    <div*/}
+              {/*      className={"flex flex-col gap-3"}*/}
+              {/*      key={sub.header + "house"}*/}
+              {/*    >*/}
+              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
+              {/*      <ul>*/}
+              {/*        {sub.items.map((item) => {*/}
+              {/*          return (*/}
+              {/*            <li key={item.title}>*/}
+              {/*              <Link*/}
+              {/*                href={"/" + data.lang + item.link}*/}
+              {/*                onClick={() => CloseMenu()}*/}
+              {/*              >*/}
+              {/*                {item.title}*/}
+              {/*              </Link>*/}
+              {/*            </li>*/}
+              {/*          );*/}
+              {/*        })}*/}
+              {/*      </ul>*/}
+              {/*    </div>*/}
+              {/*  );*/}
+              {/*})}*/}
+            </div>
+            <div>
+              <Image
+                src={"/assets/Images/navbar/nav-1.jpg"}
+                alt={"HousePlants"}
+                width={0}
+                height={0}
+                sizes={"100%"}
+                className={"w-auto h-auto min-w-[335px]"}
+              />
+            </div>
           </div>
-        </div>
-        {/*Pots menu*/}
-        <div
-          className={
-            "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-          }
-          ref={potsMenu}
-        >
-          <div className={"flex flex-wrap gap-10"}>
-            {data.navbar.subHousePlants.map((sub) => {
-              return (
-                <div
-                  className={"flex flex-col gap-3"}
-                  key={sub.header + "house"}
-                >
-                  <h3 className={"font-semibold underline"}>{sub.header}</h3>
-                  <ul>
-                    {sub.items.map((item) => {
-                      return (
-                        <li key={item.title}>
-                          <Link
-                            onClick={() => {
-                              CloseMenu();
-                            }}
-                            href={"/" + data.lang + item.link}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
+          {/*Pots menu*/}
+          <div
+            className={
+              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
+            }
+            ref={potsMenu}
+          >
+            <div className={"flex flex-wrap gap-10"}>
+              {/*{data.navbar.subHousePlants.map((sub) => {*/}
+              {/*  return (*/}
+              {/*    <div*/}
+              {/*      className={"flex flex-col gap-3"}*/}
+              {/*      key={sub.header + "house"}*/}
+              {/*    >*/}
+              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
+              {/*      <ul>*/}
+              {/*        {sub.items.map((item) => {*/}
+              {/*          return (*/}
+              {/*            <li key={item.title}>*/}
+              {/*              <Link*/}
+              {/*                onClick={() => {*/}
+              {/*                  CloseMenu();*/}
+              {/*                }}*/}
+              {/*                href={"/" + data.lang + item.link}*/}
+              {/*              >*/}
+              {/*                {item.title}*/}
+              {/*              </Link>*/}
+              {/*            </li>*/}
+              {/*          );*/}
+              {/*        })}*/}
+              {/*      </ul>*/}
+              {/*    </div>*/}
+              {/*  );*/}
+              {/*})}*/}
+            </div>
+            <div>
+              <Image
+                src={"/assets/Images/navbar/nav-2.jpg"}
+                alt={"Pots"}
+                width={0}
+                height={0}
+                sizes={"100%"}
+                className={"w-auto h-auto min-w-[335px]"}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              src={"/assets/Images/navbar/nav-2.jpg"}
-              alt={"Pots"}
-              width={0}
-              height={0}
-              sizes={"100%"}
-              className={"w-auto h-auto min-w-[335px]"}
-            />
+          {/*Care menu*/}
+          <div
+            className={
+              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
+            }
+            ref={CareMenu}
+          >
+            <div className={"flex flex-wrap gap-10"}>
+              {/*{data.navbar.subHousePlants.map((sub) => {*/}
+              {/*  return (*/}
+              {/*    <div*/}
+              {/*      className={"flex flex-col gap-3"}*/}
+              {/*      key={sub.header + "house"}*/}
+              {/*    >*/}
+              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
+              {/*      <ul>*/}
+              {/*        {sub.items.map((item) => {*/}
+              {/*          return (*/}
+              {/*            <li key={item.title}>*/}
+              {/*              <Link*/}
+              {/*                onClick={() => {*/}
+              {/*                  CloseMenu();*/}
+              {/*                }}*/}
+              {/*                href={"/" + data.lang + item.link}*/}
+              {/*              >*/}
+              {/*                {item.title}*/}
+              {/*              </Link>*/}
+              {/*            </li>*/}
+              {/*          );*/}
+              {/*        })}*/}
+              {/*      </ul>*/}
+              {/*    </div>*/}
+              {/*  );*/}
+              {/*})}*/}
+            </div>
+            <div>
+              <Image
+                src={"/assets/Images/navbar/nav-3.jpg"}
+                alt={"Pots"}
+                width={0}
+                height={0}
+                sizes={"100%"}
+                className={"w-auto h-auto min-w-[335px]"}
+              />
+            </div>
           </div>
-        </div>
-        {/*Care menu*/}
-        <div
-          className={
-            "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-          }
-          ref={CareMenu}
-        >
-          <div className={"flex flex-wrap gap-10"}>
-            {data.navbar.subHousePlants.map((sub) => {
-              return (
-                <div
-                  className={"flex flex-col gap-3"}
-                  key={sub.header + "house"}
-                >
-                  <h3 className={"font-semibold underline"}>{sub.header}</h3>
-                  <ul>
-                    {sub.items.map((item) => {
-                      return (
-                        <li key={item.title}>
-                          <Link
-                            onClick={() => {
-                              CloseMenu();
-                            }}
-                            href={"/" + data.lang + item.link}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
+          {/*Accessories menu*/}
+          <div
+            className={
+              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
+            }
+            ref={AccessoriesMenu}
+          >
+            <div className={"flex flex-wrap gap-10"}>
+              {/*{data.navbar.subHousePlants.map((sub) => {*/}
+              {/*  return (*/}
+              {/*    <div*/}
+              {/*      className={"flex flex-col gap-3"}*/}
+              {/*      key={sub.header + "house"}*/}
+              {/*    >*/}
+              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
+              {/*      <ul>*/}
+              {/*        {sub.items.map((item) => {*/}
+              {/*          return (*/}
+              {/*            <li key={item.title}>*/}
+              {/*              <Link*/}
+              {/*                onClick={() => {*/}
+              {/*                  CloseMenu();*/}
+              {/*                }}*/}
+              {/*                href={"/" + data.lang + item.link}*/}
+              {/*              >*/}
+              {/*                {item.title}*/}
+              {/*              </Link>*/}
+              {/*            </li>*/}
+              {/*          );*/}
+              {/*        })}*/}
+              {/*      </ul>*/}
+              {/*    </div>*/}
+              {/*  );*/}
+              {/*})}*/}
+            </div>
+            <div>
+              <Image
+                src={"/assets/Images/navbar/nav-4.jpg"}
+                alt={"Pots"}
+                width={0}
+                height={0}
+                sizes={"100%"}
+                className={"w-auto h-auto min-w-[335px]"}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              src={"/assets/Images/navbar/nav-3.jpg"}
-              alt={"Pots"}
-              width={0}
-              height={0}
-              sizes={"100%"}
-              className={"w-auto h-auto min-w-[335px]"}
-            />
-          </div>
-        </div>
-        {/*Accessories menu*/}
-        <div
-          className={
-            "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-          }
-          ref={AccessoriesMenu}
-        >
-          <div className={"flex flex-wrap gap-10"}>
-            {data.navbar.subHousePlants.map((sub) => {
-              return (
-                <div
-                  className={"flex flex-col gap-3"}
-                  key={sub.header + "house"}
-                >
-                  <h3 className={"font-semibold underline"}>{sub.header}</h3>
-                  <ul>
-                    {sub.items.map((item) => {
-                      return (
-                        <li key={item.title}>
-                          <Link
-                            onClick={() => {
-                              CloseMenu();
-                            }}
-                            href={"/" + data.lang + item.link}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <Image
-              src={"/assets/Images/navbar/nav-4.jpg"}
-              alt={"Pots"}
-              width={0}
-              height={0}
-              sizes={"100%"}
-              className={"w-auto h-auto min-w-[335px]"}
-            />
-          </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+      {/*<div*/}
+      {/*  className={*/}
+      {/*    "absolute top-[113px] bg-opacity-0 border-white border-b-[0.75px] z-[2] "*/}
+      {/*  }*/}
+      {/*>*/}
+      {/*  Hello*/}
+      {/*</div>*/}
+    </>
   );
 }

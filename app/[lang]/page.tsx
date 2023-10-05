@@ -7,6 +7,10 @@ import MoreInfo from "@/Components/Home/MoreInfo";
 import PlantOfTheMonth from "@/Components/Home/PlantOfTheMonth";
 import Footer from "@/Components/Shared/Footer";
 import NewReleases from "@/Components/Home/NewReleases";
+import { IntroSlider } from "@/Components/Home/IntroSlider";
+import { Security } from "@/Components/Home/Security";
+import AnbarTypes from "@/Components/Home/AnbarTypes";
+import Features from "@/Components/Home/Features";
 
 export default async function Home({
   params,
@@ -16,14 +20,19 @@ export default async function Home({
   const { lang } = params;
   const dict: any = await getDictionary(lang);
   return (
-    <main className="">
+    <main className="bg-gray-100">
       <Hero data={dict} />
-      <TopSellers data={dict} />
-      <MoreInfo data={dict} />
+      <IntroSlider />
+      <Security />
       <TopCategories data={dict} />
-      <NewReleases data={dict} />
-      <Offers data={dict} />
-      <PlantOfTheMonth data={dict} />
+
+      <AnbarTypes />
+      <Features />
+      {/*<TopSellers data={dict} />*/}
+      {/*<MoreInfo data={dict} />*/}
+      {/*<NewReleases data={dict} />*/}
+      {/*<Offers data={dict} />*/}
+      {/*<PlantOfTheMonth data={dict} />*/}
     </main>
   );
 }

@@ -27,7 +27,7 @@ export default async function RootLayout({
       <html lang={lang} dir={dict.configuration.dir}>
         <body>
           <NavBar data={dict} />
-          <main className="mt-[58px] md:mt-[126px] relative">{children}</main>
+          <main className="mt-[58px] md:mt-[113px] relative">{children}</main>
           <Footer data={dict} />
         </body>
       </html>
