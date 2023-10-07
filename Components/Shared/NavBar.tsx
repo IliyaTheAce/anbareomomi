@@ -94,14 +94,23 @@ export default function NavBar() {
             </Link>
           </div> */}
 
-          <div className="flex flex-col md:flex-row justify-center gap-6 items-start md:items-center">
+          <div className="flex flex-col md:flex-row justify-center gap-3 items-start md:items-center">
             <Link
-              href={"tel:+982191031682"}
+              href={"tel:+989056723180"}
               className={
                 "bg-gray-500 px-3 py-2 rounded-md flex items-center gap-3 hover:text-[#c96b1e] transition-all"
               }
             >
-              <span>021-91031682</span>
+              <span>09056723180</span>
+              <i className="fi fi-rr-phone-call flex items-center"></i>{" "}
+            </Link>
+            <Link
+              href={"tel:+982637773335"}
+              className={
+                "bg-gray-500 px-3 py-2 rounded-md flex items-center gap-3 hover:text-[#c96b1e] transition-all"
+              }
+            >
+              <span>026-37773335</span>
               <i className="fi fi-rr-phone-call flex items-center"></i>{" "}
             </Link>
           </div>
