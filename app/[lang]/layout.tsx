@@ -1,6 +1,5 @@
 import NavBar from "@/Components/Shared/NavBar";
 import "../globals.css";
-import { getDictionary } from "./Dictionary";
 import Footer from "@/Components/Shared/Footer";
 import React from "react";
 export default async function RootLayout({
@@ -11,7 +10,6 @@ export default async function RootLayout({
   params: { lang: "en" | "fa" | "ar" };
 }) {
   const { lang } = params;
-  const dict: any = await getDictionary(lang);
 
   return (
     <>
@@ -26,15 +24,15 @@ export default async function RootLayout({
       </head>
       <style>{`
         html {
-          font-family: ${dict.configuration.bodyFont};
+          font-family: Yekan;
         }
       `}</style>
-      <html lang={lang} dir={dict.configuration.dir}>
+      <html lang={lang} dir={"rtl"}>
         <body>
-          <NavBar data={dict} />
+          <NavBar />
           <main className="mt-[150px] md:mt-[113px] relative">{children}</main>
-           {/* @ts-ignore */}
-          <Footer data={dict} />
+          {/* @ts-ignore */}
+          <Footer />
         </body>
       </html>
     </>

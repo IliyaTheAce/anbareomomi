@@ -3,30 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MutableRefObject, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-export default function NavBar({
-  data,
-}: {
-  data: {
-    lang: string;
-    navbar: {
-      housePlants: string;
-      pots: string;
-      care: string;
-      doctor: string;
-      inspiration: string;
-      wholesale: string;
-      gifts: string;
-      accessories: string;
-      otherLang: {
-        url: string;
-        title: string;
-      };
-      // subHousePlants: [
-      //   { header: string; items: [{ title: string; link: string }] }
-      // ];
-    };
-  };
-}) {
+export default function NavBar() {
   const router = usePathname();
   const [toggle, setToggle] = useState(false);
   const houseplantsMenu = useRef() as MutableRefObject<HTMLInputElement>;

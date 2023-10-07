@@ -1,5 +1,4 @@
 import Hero from "@/Components/Home/Hero";
-import { getDictionary, localeType } from "./Dictionary";
 import TopSellers from "@/Components/Home/TopSellers";
 import TopCategories from "@/Components/Home/TopCategories";
 import Offers from "@/Components/Home/Offers";
@@ -12,13 +11,7 @@ import { Security } from "@/Components/Home/Security";
 import AnbarTypes from "@/Components/Home/AnbarTypes";
 import Features from "@/Components/Home/Features";
 
-export default async function Home({
-  params,
-}: {
-  params: { lang: localeType };
-}) {
-  const { lang } = params;
-  const dict: any = await getDictionary(lang);
+export default async function Home() {
   return (
     <main className="bg-gray-100">
       <Hero />
