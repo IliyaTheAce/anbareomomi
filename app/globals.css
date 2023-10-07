@@ -39,25 +39,28 @@
     url("/assets/font/Yesava/yeseva-one.ttf") format("ttf");
 }
 
-.font-Yeseva{
+.font-Yeseva {
   font-family: Yeseva, serif;
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-.dropMenuActive::after{
+.dropMenuActive::after {
   width: 24px;
   height: 24px;
-  content: '';
+  content: "";
   display: block;
 
   background-image: url("/assets/Images/downarrow.svg");
 }
-.dropMenuDeactive::after{
+.dropMenuDeactive::after {
   width: 24px;
   height: 24px;
-  content: '';
+  content: "";
   display: block;
   background-image: url("/assets/Images/uparrow.svg");
+}
+html {
+  font-family: Yekan;
 }
