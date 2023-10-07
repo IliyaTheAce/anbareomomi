@@ -21,10 +21,10 @@ export default async function Home({
   const dict: any = await getDictionary(lang);
   return (
     <main className="bg-gray-100">
-      <Hero data={dict} />
+      <Hero />
+      <TopCategories />
       <IntroSlider />
       <Security />
-      <TopCategories data={dict} />
 
       <AnbarTypes />
       <Features />

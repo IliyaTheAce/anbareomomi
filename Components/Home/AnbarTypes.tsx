@@ -70,7 +70,7 @@ function AnbarTypes() {
         items={[
           <Image
             key={"slide-1"}
-            src={"/assets/Images/slider/1.jpg"}
+            src={"/assets/Images/slider/slider-1.jpg"}
             alt={"slider-1"}
             width={0}
             height={0}
@@ -79,7 +79,7 @@ function AnbarTypes() {
           />,
           <Image
             key={"slide-2"}
-            src={"/assets/Images/slider/2.jpg"}
+            src={"/assets/Images/slider/slider-2.jpg"}
             alt={"slider-1"}
             width={0}
             height={0}
@@ -88,7 +88,7 @@ function AnbarTypes() {
           />,
           <Image
             key={"slide-3"}
-            src={"/assets/Images/slider/3.jpeg"}
+            src={"/assets/Images/slider/slider-3.jpg"}
             alt={"slider-1"}
             width={0}
             height={0}

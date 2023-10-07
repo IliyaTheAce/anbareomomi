@@ -5,8 +5,8 @@ function DisclosureFeatures() {
   return (
     <div className={"flex gap-3 flex-col w-full"}>
       <Disclosure>
-        <Disclosure.Button className="py-2 px-3 w-full bg-white rounded-lg shadow-lg">
-          نگهدازی اموال توقیفی
+        <Disclosure.Button className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg">
+          نگهداری اموال توقیفی
         </Disclosure.Button>
         <Transition
           enter="transition duration-100 ease-out"
@@ -25,8 +25,8 @@ function DisclosureFeatures() {
         </Transition>
       </Disclosure>
       <Disclosure>
-        <Disclosure.Button className="py-2 px-3 w-full bg-white rounded-lg shadow-lg">
-          نگهدازی جهیزیه
+        <Disclosure.Button className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg">
+          نگهداری جهیزیه
         </Disclosure.Button>
         <Transition
           enter="transition duration-100 ease-out"
@@ -43,8 +43,8 @@ function DisclosureFeatures() {
         </Transition>
       </Disclosure>
       <Disclosure>
-        <Disclosure.Button className="py-2 px-3 w-full bg-white rounded-lg shadow-lg">
-          نگهدازی کالا های تجاری
+        <Disclosure.Button className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg">
+          نگهداری کالا های تجاری
         </Disclosure.Button>
         <Transition
           enter="transition duration-100 ease-out"
@@ -63,8 +63,8 @@ function DisclosureFeatures() {
         </Transition>
       </Disclosure>
       <Disclosure>
-        <Disclosure.Button className="py-2 px-3 w-full bg-white rounded-lg shadow-lg">
-          توزیع کننده مویرگی و بنکداران عزیز{" "}
+        <Disclosure.Button className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg">
+          توزیع کننده مویرگی و بنکداران عزیز
         </Disclosure.Button>
         <Transition
           enter="transition duration-100 ease-out"

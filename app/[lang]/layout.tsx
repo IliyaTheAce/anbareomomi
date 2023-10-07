@@ -16,8 +16,13 @@ export default async function RootLayout({
   return (
     <>
       <head>
-        <title>{dict.metaData.title}</title>
-        <meta name={"description"} content={dict.metaData.description} />
+        <title>آرتا بازرگان</title>
+        <meta
+          name={"description"}
+          content={
+            "انبارهای عمومی | انبارهای زنجیره ای آرتا | خرید و فروش کانتینر ، اجاره سوله و سردخانه و انبار تجاری و وسایل منزل با بیش از ربع قرن تجربه"
+          }
+        />
       </head>
       <style>{`
         html {
@@ -27,7 +32,8 @@ export default async function RootLayout({
       <html lang={lang} dir={dict.configuration.dir}>
         <body>
           <NavBar data={dict} />
-          <main className="mt-[58px] md:mt-[113px] relative">{children}</main>
+          <main className="mt-[150px] md:mt-[113px] relative">{children}</main>
+           {/* @ts-ignore */}
           <Footer data={dict} />
         </body>
       </html>

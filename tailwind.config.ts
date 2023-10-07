@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#f58222",
+        secondary: "#443A2C",
+        textColor: "#fff",
+      },
       fontFamily: {
         IranSans: ["IranSans"],
         Poppins: ["Poppins"],

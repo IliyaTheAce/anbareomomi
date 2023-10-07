@@ -92,10 +92,13 @@ export default function NavBar({
   return (
     <>
       <div className="fixed top-0 w-full bg-[#343a40] z-10 text-white">
-        <nav
+        {/* <nav
           className={`md:py-4 relative ${
             toggle ? "flex py-4 " : "h-0 md:h-auto md:flex py-0 "
           } transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto`}
+        > */}
+        <nav
+          className={`md:py-4 relative h-auto flex py-4 transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto flex-col lg:flex-row`}
         >
           <Image
             src={"/assets/images/arta-white.png"}
@@ -103,7 +106,7 @@ export default function NavBar({
             width={263}
             height={80}
           />
-
+          {/* 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
             <Link
               href={"/"}
@@ -112,7 +115,7 @@ export default function NavBar({
             >
               خانه{" "}
             </Link>
-          </div>
+          </div> */}
 
           <div className="flex flex-col md:flex-row justify-center gap-6 items-start md:items-center">
             <Link
