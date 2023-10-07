@@ -83,7 +83,7 @@ function Footer() {
           }
         >
           <Image
-            src={"/assets/images/arta-white.png"}
+            src={"/assets/Images/arta-white.png"}
             alt={"logo"}
             width={263}
             height={80}

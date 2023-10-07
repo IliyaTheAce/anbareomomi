@@ -78,7 +78,7 @@ export default function NavBar() {
           className={`md:py-4 relative h-auto flex py-4 transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto flex-col lg:flex-row`}
         >
           <Image
-            src={"/assets/images/arta-white.png"}
+            src={"/assets/Images/arta-white.png"}
             alt={"logo"}
             width={263}
             height={80}
