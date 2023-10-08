@@ -1,0 +1,7 @@
+Sitemap:https://panel.anbareomomi.com/api/sitemap/index.xml
+
+User-agent: *
+Disallow: /api
+
+User-agent: *
+Allow: /

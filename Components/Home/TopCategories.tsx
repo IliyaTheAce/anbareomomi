@@ -6,9 +6,9 @@ export default async function TopCategories() {
     {
       image: "/assets/Images/Services/1.jpg",
       id: "1",
-      title: "اجاره انبار کانتینری",
+      title: "اجاره کانتینر و انواع انبار",
       content:
-        "با انبار های کانتینری کالاهای خود را در امن ترین شرایط نگهداری کنید،انبار های کانتینری ارزان ترین و ایزوله و امن ترین محیط برای نگهداری انواع کالا و اثاثیه شما میباشد",
+        "با انبار های زنجیره ای آرتا کالاهای خود را در امن ترین شرایط نگهداری کنید،انبار های کانتینری ارزان ترین و ایزوله و امن ترین محیط برای نگهداری انواع کالا و اثاثیه شما میباشد",
     },
     {
       image: "/assets/Images/Services/saderat.jpg",
@@ -79,7 +79,7 @@ export default async function TopCategories() {
           return (
             <div
               key={item.id}
-              className="relative rounded-lg overflow-hidden  bg-white shadow-xl"
+              className="relative rounded-lg overflow-hidden  bg-white shadow-xl pb-5"
             >
               <Image
                 alt={item.title}
@@ -91,7 +91,7 @@ export default async function TopCategories() {
               />
               <div className={"flex flex-col gap-4 mt-6 px-5 pb-5"}>
                 <h3 className={"text-[2rem] text-[#495057]"}>{item.title} </h3>
-                <p className={"text-[1.3rem] text-[#adb5bd] text-justify"}>
+                <p className={"text-[1.3rem] text-dimText text-justify"}>
                   {item.content}
                 </p>
               </div>

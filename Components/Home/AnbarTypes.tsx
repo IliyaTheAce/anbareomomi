@@ -1,102 +1,63 @@
 import React from "react";
 import Image from "next/image";
 import { Sliders } from "@/Components/Home/Slider";
+import TypesSlider from "./TypesSlider";
 
 function AnbarTypes() {
   return (
     <section
-      className={"w-full max-w-[1200px] flex flex-col gap-7 mx-auto mt-10"}
+      className={
+        "w-full flex flex-col gap-7 mx-auto mt-10 justify-center items-center"
+      }
     >
-      <h2 className={"text-[2.4rem] text-[#495057]"}>
-        انواع انبارهای عمومی آرتا
-      </h2>
-      <p className={"text-[1.3rem] text-[#adb5bd]"}>
-        انبار ها با توجه به کاربردهایی که برای مشتریان دارند از انواع مختلفی
-        برخوردار هستند که در ادامه به برخی از این انبارها اشاره خواهیم نمود.
-      </p>
-      <div
+      <h2
         className={
-          "flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0"
+          "text-[2.4rem] text-secondary border-b-2 border-b-primary pb-5"
         }
       >
-        <div className={"flex flex-row gap-2"}>
-          <Image
-            src={"/assets/Images/icons/png3.png"}
-            alt={"icon"}
-            width={80}
-            height={80}
-          />
-          <div className={"flex flex-col gap-3"}>
-            <h3 className={"text-[#495057] text-[1.7rem]"}>انبار کانتینری</h3>
-            <span className={"text-[#495057] text-[1rem]"}>
-              اجاره انبار های کانتینری برای کالا
-            </span>
+        انواع انبارهای عمومی آرتا
+      </h2>
+      <div className="relative w-full h-[500px] overflow-hidden bg-black text-textColor flex items-center">
+        <Image
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-auto h-auto opacity-50 object-cover absolute"
+          fill
+          alt="انواع انبار های آرتا"
+          src="/assets/Images/Hero2.jpg"
+        />
+        <TypesSlider />
+        <div className=" lg:grid-cols-3  justify-evenly items-center absolute w-full h-full top-0 right-0 gap-10 px-10 hidden lg:grid">
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
+            <h2 className="text-3xl">انبار سوله ای مسقف</h2>
+            <p className="text-justify">
+              گاهی برای نگهداری تجهیزات و وسایل مهم و گران قیمت کارخانه ای نیاز
+              به یک محیط بسته عایق و ایمن میباشد به همین منظور انبار های مسقف
+              برای نگهداری این تجهیزات مناسب بوده و توسط صاحبان مشاغل برای مدت
+              زمان مشخصی اجاره می شود.
+            </p>
           </div>
-        </div>
-        <div className={"flex flex-row gap-2"}>
-          <Image
-            src={"/assets/Images/icons/png1.png"}
-            alt={"icon"}
-            width={80}
-            height={80}
-          />
-          <div className={"flex flex-col gap-3"}>
-            <h3 className={"text-[#495057] text-[1.7rem]"}>
-              انبار های سردخانه ای
-            </h3>
-            <span className={"text-[#495057] text-[1rem]"}>
-              اجاره انبارهای روباز و سردخانه ای
-            </span>
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
+            <h2 className="text-3xl"> کانتینر کولردار و سردخانه</h2>
+            <p className="text-justify">
+              امروزه به دلیل گسترش کارها نیاز به اجاره انبار در تمامی صتف ها و
+              مشاغل افزایش پیدا کرده است. برخی از محصولات مانند مواد غذایی و
+              دارویی و… جهت انبار شدن به دما حساس میباشند، بنابراین حتما باید
+              برای نگهداری این نوع از کالاها از انبارهای سردخانه ای استفاده کرد.
+            </p>
           </div>
-        </div>
-        <div className={"flex flex-row gap-2"}>
-          <Image
-            src={"/assets/Images/icons/png2.png"}
-            alt={"icon"}
-            width={80}
-            height={80}
-          />
-          <div className={"flex flex-col gap-3"}>
-            <h3 className={"text-[#495057] text-[1.7rem]"}>
-              انبار سوله ای مسقف
-            </h3>
-            <span className={"text-[#495057] text-[1rem]"}>
-              اجاره انواع انبار سوله ای
-            </span>
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
+            <h2 className="text-3xl"> انبار کانتینری</h2>
+            <p className="text-justify">
+              کانتیرها در مدل های 20 و 40 فوتی با پوشش فلزی و ارتفاع 2.5 متر از
+              کف و با طول های متفاوت مناسب نگهداری انواع کالا و اثاثیه میباشد.
+              از این ها برای حمل بار در مسافت های طولانی استفاده میشود. نوع
+              خارجی آن تمامی استاندارد های حمل نقل دریایی و هوایی را دارد.
+            </p>
           </div>
         </div>
       </div>
-      <Sliders
-        items={[
-          <Image
-            key={"slide-1"}
-            src={"/assets/Images/slider/slider-1.jpg"}
-            alt={"slider-1"}
-            width={0}
-            height={0}
-            sizes={"100vw"}
-            className={"w-auto h-auto max-h-[499px] overflow-hidden mx-auto"}
-          />,
-          <Image
-            key={"slide-2"}
-            src={"/assets/Images/slider/slider-2.jpg"}
-            alt={"slider-1"}
-            width={0}
-            height={0}
-            sizes={"100vw"}
-            className={"w-auto h-auto max-h-[499px] overflow-hidden mx-auto"}
-          />,
-          <Image
-            key={"slide-3"}
-            src={"/assets/Images/slider/slider-3.jpg"}
-            alt={"slider-1"}
-            width={0}
-            height={0}
-            sizes={"100vw"}
-            className={"w-auto h-auto max-h-[499px] overflow-hidden mx-auto"}
-          />,
-        ]}
-      />
     </section>
   );
 }

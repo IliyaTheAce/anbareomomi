@@ -16,10 +16,10 @@ export const Security = () => {
         className={"w-full h-auto"}
       />
       <div className={"flex flex-col gap-10 "}>
-        <h2 className={"text-[2.5rem] text-[#495057]"}>
+        <h2 className={"text-[2.5rem] text-secondary border-b-2 border-b-primary pb-5 "}>
           تیم حفاظتی و امنیتی مستقر در انبارهای آرتا
         </h2>
-        <p className={"text-[1.3rem] text-[#adb5bd] text-justify"}>
+        <p className={"text-[1.3rem] text-dimText text-justify"}>
           تیم حفاظتی و امنیتی مستقر در انبارهای زنجیره ای آرتا زیر نظر نیروی
           انتظامی جمهوری اسلامی ایران به صورت 24 ساعته محافظ اموال و امنیت کالای
           شما در انبارهای آرتا می باشد.

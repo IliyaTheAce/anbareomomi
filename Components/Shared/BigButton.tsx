@@ -9,7 +9,7 @@ export default function BigButton({
 }) {
   return (
     <Link
-      href={"tel:+982637773335"}
+      href={"tel:+989056723180"}
       className={`${minWidth ? "" : "w-full"} ${
         color ? color : "bg-secondary text-textColor"
       } rounded-full   flex justify-center items-center py-3 px-5`}

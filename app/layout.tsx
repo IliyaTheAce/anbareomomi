@@ -2,6 +2,13 @@ import NavBar from "@/Components/Shared/NavBar";
 import "./globals.css";
 import Footer from "@/Components/Shared/Footer";
 import React from "react";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'آرتا بازرگان',
+  description:             "انبارهای عمومی | انبارهای زنجیره ای آرتا | خرید و فروش کانتینر ، اجاره سوله و سردخانه و انبار تجاری و وسایل منزل با بیش از ربع قرن تجربه"
+  ,
+}
 export default async function RootLayout({
   children,
   params,
@@ -12,16 +19,7 @@ export default async function RootLayout({
   const { lang } = params;
 
   return (
-    <>
-      <head>
-        <title>آرتا بازرگان</title>
-        <meta
-          name={"description"}
-          content={
-            "انبارهای عمومی | انبارهای زنجیره ای آرتا | خرید و فروش کانتینر ، اجاره سوله و سردخانه و انبار تجاری و وسایل منزل با بیش از ربع قرن تجربه"
-          }
-        />
-      </head>
+    
       <html lang={lang} dir={"rtl"}>
         <body>
           <NavBar />
@@ -30,6 +28,5 @@ export default async function RootLayout({
           <Footer />
         </body>
       </html>
-    </>
   );
 }
