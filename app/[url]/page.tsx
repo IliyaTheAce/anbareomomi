@@ -91,7 +91,10 @@ export default async function Page({ params }: { params: { url: string } }) {
               {data.RelatedLinks.map(
                 (related: { link: string; linkTitle: string }) => {
                   return (
-                    <Link href={`https://anbareomomi.com/${related.link}`}>
+                    <Link
+                      href={`https://anbareomomi.com/${related.link}`}
+                      key={related.link}
+                    >
                       {related.linkTitle}
                     </Link>
                   );

@@ -19,7 +19,7 @@ export function Sliders({ items }: { items: any[] }) {
       <div ref={sliderRef} className="keen-slider">
         {items.map((item) => {
           return (
-            <div className="keen-slider__slide">
+            <div className="keen-slider__slide" key={item}>
               <Image
                 src={item}
                 alt={"slider"}
