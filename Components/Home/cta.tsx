@@ -51,7 +51,7 @@ export default function page({ items }: { items: string[] }) {
               </div>
             );
           })}
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

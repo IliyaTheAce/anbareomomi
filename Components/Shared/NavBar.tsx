@@ -85,7 +85,7 @@ export default function NavBar() {
               height={80}
             />
           </Link>
-          {/* 
+          {/*
           <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
             <Link
               href={"/"}
