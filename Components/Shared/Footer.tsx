@@ -158,7 +158,11 @@ function Footer() {
             height={80}
           />
           <div className={"text-xl text-center"}>
-            جهت اطلاع از هزینه ها و خدمات آرتا با 09056723180 تماس حاصل نمایید
+            جهت اطلاع از هزینه ها و خدمات آرتا با{" "}
+            <Link href={"tel:+989056723180"} target="_blank">
+              09056723180
+            </Link>
+            تماس حاصل نمایید
           </div>
         </div>
         {/* <Sliders items={mapItems} /> */}

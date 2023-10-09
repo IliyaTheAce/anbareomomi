@@ -11,11 +11,13 @@ import { Security } from "@/Components/Home/Security";
 import AnbarTypes from "@/Components/Home/AnbarTypes";
 import Features from "@/Components/Home/Features";
 import AboutUs from "@/Components/Home/َAboutUs";
+import CTA from "@/Components/Home/cta";
 
 export default async function Home() {
   return (
     <main className="bg-gray-100">
       <Hero />
+      <CTA items={[]} />
       <TopCategories />
       <AboutUs />
       <IntroSlider />

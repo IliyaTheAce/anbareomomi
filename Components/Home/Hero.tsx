@@ -10,7 +10,7 @@ const yeseva = Yeseva_One({
 
 export default function Hero() {
   return (
-    <section className="w-full overflow-y-visible flex justify-start items-start flex-col relative lg:h-[75%] mb-20">
+    <section className="w-full overflow-y-visible flex justify-start items-start flex-col relative lg:h-[75%] ">
       <Slider
         slides={["/assets/Images/Hero.jpg", "/assets/Images/Hero2.jpg"]}
         loop
@@ -26,7 +26,7 @@ export default function Hero() {
       </div> */}
       <div
         className={
-          "flex justify-center items-center gap-7 flex-col py-5 md:absolute top-0 h-[110%] right-[7%] text-secondary md:text-textColor px-10 md:w-[470px] xl:w-[550px] w-full"
+          "flex justify-center items-center gap-7 flex-col py-5 md:absolute top-0 h-full right-[7%] text-secondary md:text-textColor px-10 md:w-[470px] xl:w-[550px] w-full"
         }
       >
         <div className={`text-4xl font-semibold font-IranSans`}>

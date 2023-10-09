@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata(
   { params }: { params: { url: string } },
@@ -20,6 +22,9 @@ export async function generateMetadata(
     }
   );
   const result = await response.json();
+  if (result.data.length == 0) {
+    redirect("/not-found");
+  }
   const data = result.data[0].attributes;
   return {
     title: data.seo.metaTitle,
@@ -36,6 +41,7 @@ export default async function Page({ params }: { params: { url: string } }) {
         Authorization:
           "Bearer cdb40e6443b8a128dbeecc039edb54ccc2ed1795b8fe334af9cfaa6471acf6b86c43950afe9c72cd1ff728131573fea434886c3beb285593d3c1f1b8f0e1a750cd51d9c4a174f8d7fc53179bb05da08032b37c52a01e533b4b85e242ff38e3e7e27c8f23d4c89bf684514935318a530fc6c12284c988794f7557aaaa68b4f4df",
       },
+      cache: "no-store",
     }
   );
   const result = await response.json();
@@ -75,9 +81,25 @@ export default async function Page({ params }: { params: { url: string } }) {
           </div>
         </div>
         <article
-          className={"font-Yekan px-14"}
+          className={"font-Yekan px-5 md:px-8 lg:px-14 text-secondary pb-10"}
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
+        {data.RelatedLinks.length > 0 && (
+          <>
+            <h4 className="text-xl text-right w-full">مطالب مرتبط</h4>
+            <div className="flex flex-col gap-3 items-start w-full px-5 md:px-8 lg:px-14 text-secondary pb-10 px-10">
+              {data.RelatedLinks.map(
+                (related: { link: string; linkTitle: string }) => {
+                  return (
+                    <Link href={`https://anbareomomi.com/${related.link}`}>
+                      {related.linkTitle}
+                    </Link>
+                  );
+                }
+              )}
+            </div>
+          </>
+        )}
       </main>
     </>
   );

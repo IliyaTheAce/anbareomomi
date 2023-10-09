@@ -10,6 +10,7 @@ export default function BigButton({
   return (
     <Link
       href={"tel:+989056723180"}
+      target="_blank"
       className={`${minWidth ? "" : "w-full"} ${
         color ? color : "bg-secondary text-textColor"
       } rounded-full   flex justify-center items-center py-3 px-5`}
