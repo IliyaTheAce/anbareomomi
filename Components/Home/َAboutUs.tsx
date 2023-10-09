@@ -15,32 +15,45 @@ export default function AboutUs() {
         >
           درباره آرتا
         </h2>
-        <p className={"text-xl text-dimText text-justify "}>
+        <p className={"text-xl text-dimText text-justify px-4"}>
           شرکت آرتا بازرگان با ربع قرن تجربه، به عنوان شرکت مادر اقدام به تاسیس
           انبارهای زنجیره ای آرتا با 6 شعبه فعال نمود. این شرکت در حال حاضر در
           شهرهای تهران، کرج و قزوین با بیش از 1200 مشتری آماده خدمت رسانی
           میباشد.
         </p>
       </div>
-      <div className=" flex flex-col gap-4 items-center ">
-        <h3 className="text-4xl text-secondary">مزیت های آرتا</h3>
-        <div className="animate-pulse text-dimText text-xl ">
-          <br />
-          عضو رسمی اتحادیه انبارداران
-          <br />
-          نگهبانی 24 ساعته تحت نظارت نیرو انتظامی
-          <br />
-          دوربین مداربسته هوشمند
-          <br />
-          دوربین اختصاصی
-          <br />
-          ارائه گزارش انبارداری
-          <br />
-          نصب گاو صندوق اختصاصی
-          <br />
-          ضمانت نامه بانکی (برای کالا خاص)
-          <br />
-          ضد زلزله، ضد آتش سوزی و ضد آب
+      <div className="items-center justify-center text-textColor bg-primary animate-pulse text-xl p-10 rounded-xl text-center grid grid-cols-1 lg:grid-cols-2">
+        <div className={"text-lg  flex flex-row gap-2 text-right items-center"}>
+          <i className="fi fi-rr-calendar-day flex items-center"></i>
+          <span> عضو رسمی اتحادیه انبارداران</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 text-right items-center"}>
+          <i className="fi fi-rr-time-quarter-to flex items-center"></i>
+          <span> نگهبانی 24 ساعته تحت نظارت نیرو انتظامی</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 items-center"}>
+          <i className="fi fi-rr-camera-security flex  items-center"></i>
+          <span> دوربین مداربسته هوشمند</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 items-center"}>
+          <i className="fi fi-rr-camera-cctv flex items-center"></i>
+          <span> دوربین اختصاصی</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 items-center"}>
+          <i className="fi fi-rr-file-medical-alt flex items-center"></i>
+          <span> ارائه گزارش انبارداری</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 "}>
+          <i className="fi fi-rr-box-open flex items-center"></i>
+          <span> نصب گاو صندوق اختصاصی</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 items-center text-right"}>
+          <i className="fi fi-rr-bank flex items-center"></i>
+          <span> ضمانت نامه بانکی (برای کالا خاص)</span>
+        </div>
+        <div className={"text-lg  flex flex-row gap-2 text-right items-center"}>
+          <i className="fi fi-rr-shield-check flex items-center"></i>
+          <span> ضد زلزله، ضد آتش سوزی و ضد آب</span>
         </div>
       </div>
     </section>

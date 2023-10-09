@@ -1,12 +1,5 @@
-import Image from "next/image";
-import { Yeseva_One } from "next/font/google";
 import BigButton from "../Shared/BigButton";
 import Slider from "../Shared/Slider";
-
-const yeseva = Yeseva_One({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export default function Hero() {
   return (
@@ -29,7 +22,7 @@ export default function Hero() {
           "flex justify-center items-center gap-7 flex-col py-5 md:absolute top-0 h-full right-[7%] text-secondary md:text-textColor px-10 md:w-[470px] xl:w-[550px] w-full"
         }
       >
-        <div className={`text-4xl font-semibold font-IranSans`}>
+        <div className={`text-3xl md:text-4xl font-semibold font-IranSans`}>
           انبار های زنجیره ای آرتا
         </div>
         {/* <div className={`text-md font-light px-2 font-IranSans text-justify `}>

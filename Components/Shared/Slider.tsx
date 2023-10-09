@@ -20,7 +20,7 @@ export default function Slider({
       slideChanged() {
         console.log("slide changed");
       },
-      drag: false,
+      drag: true,
       loop: true,
       rtl: true,
     },
