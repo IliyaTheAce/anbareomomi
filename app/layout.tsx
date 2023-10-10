@@ -3,27 +3,56 @@ import "./globals.css";
 import Footer from "@/Components/Shared/Footer";
 import React from "react";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "انبار های زنجیره ای آرتا",
+  metadataBase: new URL("https://anbareomomi.com"),
+  title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
   description:
     "انبارهای عمومی | انبارهای زنجیره ای آرتا | خرید و فروش کانتینر ، اجاره سوله و سردخانه و انبار تجاری و وسایل منزل با بیش از ربع قرن تجربه",
+  openGraph: {
+    type: "website",
+    title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
+    images: "/assets/Images/arta-white.png",
+  },
+  creator: "09112079676 - Iliya farhadi",
+  colorScheme: "light dark",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
 };
 export default async function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { lang: "en" | "fa" | "ar" };
 }) {
-  const { lang } = params;
-
+  const result = await fetch("https://panel.anbareomomi.com/api/navbar", {
+    method: "Get",
+    headers: {
+      Authorization:
+        "Bearer cdb40e6443b8a128dbeecc039edb54ccc2ed1795b8fe334af9cfaa6471acf6b86c43950afe9c72cd1ff728131573fea434886c3beb285593d3c1f1b8f0e1a750cd51d9c4a174f8d7fc53179bb05da08032b37c52a01e533b4b85e242ff38e3e7e27c8f23d4c89bf684514935318a530fc6c12284c988794f7557aaaa68b4f4df",
+    },
+  });
+  const data = await result.json();
+  const navbarData = data.data.attributes.items;
   return (
-    <html lang={lang} dir={"rtl"}>
-      <body>
-        <NavBar />
-        <main className="mt-[150px] md:mt-[113px] relative">{children}</main>
-        {/* @ts-ignore */}
+    <html lang="fa" dir={"rtl"}>
+      <body className={"bg-white text-secondary"}>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MK3ELF3N0Y"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MK3ELF3N0Y');`}
+        </Script>
+        <NavBar navbarLinks={navbarData} />
+        <main className="mt-[140px] md:mt-[93px] relative">{children}</main>
         <Footer />
       </body>
     </html>

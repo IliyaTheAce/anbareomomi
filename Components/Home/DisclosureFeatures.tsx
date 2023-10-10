@@ -6,7 +6,10 @@ function DisclosureFeatures() {
     <div className={"grid grid-cols-1 lg:grid-cols-2  gap-3 flex-col w-full"}>
       <div className="flex flex-col gap-3 ">
         <Disclosure>
-          <Disclosure.Button className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg">
+          <Disclosure.Button
+            as={"button"}
+            className="py-2 px-3 w-full bg-secondary hover:bg-primary text-white hover:text-secondary transition-colors rounded-lg shadow-lg"
+          >
             نگهداری اموال توقیفی
           </Disclosure.Button>
           <Transition

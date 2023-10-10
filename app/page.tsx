@@ -25,11 +25,6 @@ export default async function Home() {
 
       <AnbarTypes />
       <Features />
-      {/*<TopSellers data={dict} />*/}
-      {/*<MoreInfo data={dict} />*/}
-      {/*<NewReleases data={dict} />*/}
-      {/*<Offers data={dict} />*/}
-      {/*<PlantOfTheMonth data={dict} />*/}
     </main>
   );
 }

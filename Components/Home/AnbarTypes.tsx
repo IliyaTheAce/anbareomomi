@@ -12,7 +12,7 @@ function AnbarTypes() {
     >
       <h2
         className={
-          "text-[2.4rem] text-secondary border-b-2 border-b-primary pb-5"
+          "text-2xl md:text-3xl lg:text-4xl text-secondary border-b-2 border-b-primary pb-5"
         }
       >
         انواع انبارهای عمومی آرتا
@@ -29,8 +29,8 @@ function AnbarTypes() {
         />
         <TypesSlider />
         <div className=" lg:grid-cols-3  justify-evenly items-center absolute w-full h-full top-0 right-0 gap-10 px-10 hidden lg:grid">
-          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
-            <h2 className="text-3xl">انبار سوله ای مسقف</h2>
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[80%]">
+            <h3 className="text-3xl">انبار سوله ای مسقف</h3>
             <p className="text-justify">
               گاهی برای نگهداری تجهیزات و وسایل مهم و گران قیمت کارخانه ای نیاز
               به یک محیط بسته عایق و ایمن میباشد به همین منظور انبار های مسقف
@@ -38,7 +38,7 @@ function AnbarTypes() {
               زمان مشخصی اجاره می شود.
             </p>
           </div>
-          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[80%]">
             <h2 className="text-3xl"> کانتینر کولردار و سردخانه</h2>
             <p className="text-justify">
               امروزه به دلیل گسترش کارها نیاز به اجاره انبار در تمامی صتف ها و
@@ -47,7 +47,7 @@ function AnbarTypes() {
               برای نگهداری این نوع از کالاها از انبارهای سردخانه ای استفاده کرد.
             </p>
           </div>
-          <div className="flex flex-col gap-6 justify-center items-center opacity-[70%]">
+          <div className="flex flex-col gap-6 justify-center items-center opacity-[80%]">
             <h2 className="text-3xl"> انبار کانتینری</h2>
             <p className="text-justify">
               کانتیرها در مدل های 20 و 40 فوتی با پوشش فلزی و ارتفاع 2.5 متر از

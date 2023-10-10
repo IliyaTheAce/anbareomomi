@@ -4,9 +4,13 @@ import DisclosureFeatures from "@/Components/Home/DisclosureFeatures";
 function Features() {
   return (
     <section className={" mx-auto w-full max-w-[1200px] mt-10 pb-10 "}>
-      <h3 className={"text-[2.5rem] text-[#495057] w-full text-center mb-5"}>
+      <h2
+        className={
+          "text-2xl md:text-3xl lg:text-4xl text-[#495057] w-full text-center mb-5"
+        }
+      >
         برخی از ویژگی های آرتا
-      </h3>
+      </h2>
       <DisclosureFeatures />
     </section>
   );

@@ -5,6 +5,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./Components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -12,7 +13,7 @@ const config: Config = {
         primary: "#f58222",
         secondary: "#343a40",
         textColor: "#fff",
-        dimText: "#adb5bd",
+        dimText: "#65686e",
       },
       fontFamily: {
         IranSans: ["IranSans"],
@@ -22,6 +23,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 export default config;

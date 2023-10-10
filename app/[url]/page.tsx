@@ -45,6 +45,9 @@ export default async function Page({ params }: { params: { url: string } }) {
     }
   );
   const result = await response.json();
+  if (result.data.length == 0) {
+    redirect("/not-found");
+  }
   const data = result.data[0].attributes;
 
   return (

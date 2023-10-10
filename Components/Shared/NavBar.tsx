@@ -1,102 +1,170 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { MutableRefObject, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
-export default function NavBar() {
-  const router = usePathname();
-  const [toggle, setToggle] = useState(false);
-  const houseplantsMenu = useRef() as MutableRefObject<HTMLInputElement>;
-  const potsMenu = useRef() as MutableRefObject<HTMLInputElement>;
-  const CareMenu = useRef() as MutableRefObject<HTMLInputElement>;
-  const AccessoriesMenu = useRef() as MutableRefObject<HTMLInputElement>;
-  let currentOpenedMenu: MutableRefObject<HTMLDivElement> | null;
-  let currentMenuButton: HTMLButtonElement | null;
+import { useState } from "react";
+import { Dropdown } from "flowbite-react";
+import { DropdownItem } from "flowbite-react/lib/esm/components/Dropdown/DropdownItem";
+export type Root = Array<{
+  title: string;
+  link: string;
+  type: "simple" | "nested";
+  subLinks?: Array<{
+    title: string;
+    link: string;
+    type: "simple" | "nested";
+    subLinks: Array<{
+      title: string;
+      link: string;
+    }>;
+  }>;
+}>;
+// [
+//   {
+//     "title": "خانه",
+//     "link": "/",
+//     "type": "simple"
+//   },
+//   {
+//     "title": "خدمات",
+//     "link": "/services",
+//     "type": "nested",
+//     "subLinks": [
+//       {
+//         "title": "تماس ما",
+//         "link": "/contact-us",
+//         "type": "simple"
+//       },
+//       {
+//         "title": "تماس ما",
+//         "link": "/contact-us",
+//         "type": "simple"
+//       },
+//       {
+//         "title": "درباره ما",
+//         "link": "/about-us",
+//         "type": "nested",
+//         "subLinks": [
+//           {
+//             "title": "تماس ما",
+//             "link": "/contact-us",
+//             "type": "simple"
+//           },
+//           {
+//             "title": "درباره ما",
+//             "link": "/about-us",
+//             "type": "nested"
+//           }
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     "title": "تماس ما",
+//     "link": "/contact-us",
+//     "type": "simple"
+//   },
+//   {
+//     "title": "درباره ما",
+//     "link": "/about-us",
+//     "type": "simple"
+//   }
+// ]
+export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
+  const [toggle, setToggle] = useState<boolean>(false);
 
-  const CloseMenu = () => {
-    if (currentMenuButton) {
-      currentMenuButton.classList.remove("underline", "text-gray-500");
-      currentMenuButton = null;
-    }
-    if (currentOpenedMenu) {
-      currentOpenedMenu.current.classList.remove(
-        "opacity-100",
-        "pointer-events-auto"
-      );
-      currentOpenedMenu.current.classList.add(
-        "opacity-0",
-        "pointer-events-none"
-      );
-      currentOpenedMenu = null;
-    }
-  };
-  const OpenMenu = (
-    menu: MutableRefObject<HTMLDivElement>,
-    button: HTMLButtonElement
-  ) => {
-    if (currentMenuButton) {
-      currentMenuButton.classList.remove("underline", "text-gray-500");
-      if (currentMenuButton.id === button.id) {
-        currentMenuButton = null;
-      } else {
-        currentMenuButton = button;
-        button.classList.add("underline", "text-gray-500");
-      }
-    } else {
-      button.classList.add("underline", "text-gray-500");
-      currentMenuButton = button;
-    }
-
-    if (currentOpenedMenu) {
-      currentOpenedMenu.current.classList.add(
-        "opacity-0",
-        "pointer-events-none"
-      );
-      currentOpenedMenu.current.classList.remove(
-        "opacity-100",
-        "pointer-events-auto"
-      );
-      if (currentOpenedMenu === menu) {
-        currentOpenedMenu = null;
-        return;
-      }
-      currentOpenedMenu = null;
-    }
-    menu.current.classList.remove("opacity-0", "pointer-events-none");
-    menu.current.classList.add("pointer-events-auto", "opacity-100");
-    currentOpenedMenu = menu;
-  };
   return (
     <>
       <div className="fixed top-0 w-full bg-secondary z-10 text-white">
-        {/* <nav
-          className={`md:py-4 relative ${
-            toggle ? "flex py-4 " : "h-0 md:h-auto md:flex py-0 "
-          } transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto`}
-        > */}
         <nav
-          className={`py-4 relative h-auto flex py-4 transition-all px-4 items-center justify-between  max-w-[1200px] mx-auto md:flex-row flex-col`}
+          className={
+            "w-full max-w-[1400px] justify-between flex flex-col md:flex-row py-4 px-5 mx-auto gap-2"
+          }
         >
-          <Link href={"/"}>
-            <Image
-              src={"/assets/Images/arta-white.png"}
-              alt={"logo"}
-              width={263}
-              height={80}
-            />
-          </Link>
-          {/*
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 ">
-            <Link
-              href={"/"}
-              id={"housePlants"}
-              className={"flex gap-1 justify-center items-center"}
+          <div
+            className={
+              "flex flex-row gap-5 items-center justify-between md:justify-start whitespace-nowrap"
+            }
+          >
+            <button
+              className={"md:hidden"}
+              onClick={() => setToggle((prev) => !prev)}
             >
-              خانه{" "}
-            </Link>
-          </div> */}
+              <i className="fi fi-br-menu-burger text-xl flex items-center"></i>
+            </button>
 
-          <div className="flex flex-wrap justify-center gap-3 items-center">
+            <Link href={"https://anbareomomi.com"}>
+              <Image
+                src={"/assets/Images/arta-white.png"}
+                alt={"logo"}
+                width={200}
+                height={0}
+                className={"h-auto"}
+              />
+            </Link>
+            <div
+              className={`${
+                toggle ? "fixed top-[150px]" : "hidden md:flex"
+              } md:top-0 md:relative md:bg-opacity-0 bg-white md:p-0 p-4 rounded-lg shadow-lg md:shadow-none text-secondary md:text-textColor flex flex-col md:flex-row items-center`}
+            >
+              {navbarLinks.map((topLink) => {
+                return topLink.type === "nested" ? (
+                  <Dropdown
+                    theme={{
+                      arrowIcon: "mr-2 h-4 w-4",
+                      content: "py-1 focus:outline-none",
+                      floating: {
+                        target:
+                          "w-fit border-0 focus:outline-0 text-black md:text-textColor",
+                      },
+                    }}
+                    label={topLink.title}
+                    placement="bottom"
+                  >
+                    {topLink.subLinks?.map((secondLinks) => {
+                      return secondLinks.type === "nested" ? (
+                        <Dropdown
+                          theme={{
+                            arrowIcon: "mr-2 h-4 w-4",
+                            content: "py-1 focus:outline-none",
+                            floating: {
+                              target:
+                                "w-fit border-0 focus:outline-0 text-black",
+                            },
+                          }}
+                          label={secondLinks.title}
+                          placement="left"
+                        >
+                          {secondLinks.subLinks?.map((thirdLink) => {
+                            return (
+                              <Dropdown.Item key={thirdLink.link}>
+                                {thirdLink.title}
+                              </Dropdown.Item>
+                            );
+                          })}
+                        </Dropdown>
+                      ) : (
+                        <Dropdown.Item key={secondLinks.link}>
+                          <Link href={secondLinks.link}>
+                            {secondLinks.title}
+                          </Link>
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </Dropdown>
+                ) : (
+                  <Link
+                    href={topLink.link}
+                    key={topLink.link}
+                    className={"text-sm py-2 px-3"}
+                  >
+                    {topLink.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 items-center ">
             <Link
               href={"tel:+989056723180"}
               target="_blank"
@@ -104,7 +172,7 @@ export default function NavBar() {
                 "bg-gray-500 px-3 py-2 rounded-md flex items-center gap-3 hover:text-[#c96b1e] transition-all"
               }
             >
-              <span>09056723180</span>
+              <span className={"font-IranSans"}>09056723180</span>
               <i className="fi fi-rr-phone-call flex items-center"></i>{" "}
             </Link>
             <Link
@@ -114,200 +182,36 @@ export default function NavBar() {
                 "bg-gray-500 px-3 py-2 rounded-md flex items-center gap-3 hover:text-[#c96b1e] transition-all"
               }
             >
-              <span>026-37773335</span>
+              <span className={"font-IranSans"}>026-37773335</span>
               <i className="fi fi-rr-phone-call flex items-center"></i>{" "}
             </Link>
           </div>
-          <div
-            className={
-              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-            }
-            ref={houseplantsMenu}
-          >
-            <div className={"flex flex-wrap gap-10"}>
-              {/*{data.navbar.subHousePlants.map((sub) => {*/}
-              {/*  return (*/}
-              {/*    <div*/}
-              {/*      className={"flex flex-col gap-3"}*/}
-              {/*      key={sub.header + "house"}*/}
-              {/*    >*/}
-              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
-              {/*      <ul>*/}
-              {/*        {sub.items.map((item) => {*/}
-              {/*          return (*/}
-              {/*            <li key={item.title}>*/}
-              {/*              <Link*/}
-              {/*                href={"/" + data.lang + item.link}*/}
-              {/*                onClick={() => CloseMenu()}*/}
-              {/*              >*/}
-              {/*                {item.title}*/}
-              {/*              </Link>*/}
-              {/*            </li>*/}
-              {/*          );*/}
-              {/*        })}*/}
-              {/*      </ul>*/}
-              {/*    </div>*/}
-              {/*  );*/}
-              {/*})}*/}
-            </div>
-            <div>
-              <Image
-                src={"/assets/Images/navbar/nav-1.jpg"}
-                alt={"HousePlants"}
-                width={0}
-                height={0}
-                sizes={"100%"}
-                className={"w-auto h-auto min-w-[335px]"}
-              />
-            </div>
-          </div>
-          {/*Pots menu*/}
-          <div
-            className={
-              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-            }
-            ref={potsMenu}
-          >
-            <div className={"flex flex-wrap gap-10"}>
-              {/*{data.navbar.subHousePlants.map((sub) => {*/}
-              {/*  return (*/}
-              {/*    <div*/}
-              {/*      className={"flex flex-col gap-3"}*/}
-              {/*      key={sub.header + "house"}*/}
-              {/*    >*/}
-              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
-              {/*      <ul>*/}
-              {/*        {sub.items.map((item) => {*/}
-              {/*          return (*/}
-              {/*            <li key={item.title}>*/}
-              {/*              <Link*/}
-              {/*                onClick={() => {*/}
-              {/*                  CloseMenu();*/}
-              {/*                }}*/}
-              {/*                href={"/" + data.lang + item.link}*/}
-              {/*              >*/}
-              {/*                {item.title}*/}
-              {/*              </Link>*/}
-              {/*            </li>*/}
-              {/*          );*/}
-              {/*        })}*/}
-              {/*      </ul>*/}
-              {/*    </div>*/}
-              {/*  );*/}
-              {/*})}*/}
-            </div>
-            <div>
-              <Image
-                src={"/assets/Images/navbar/nav-2.jpg"}
-                alt={"Pots"}
-                width={0}
-                height={0}
-                sizes={"100%"}
-                className={"w-auto h-auto min-w-[335px]"}
-              />
-            </div>
-          </div>
-          {/*Care menu*/}
-          <div
-            className={
-              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-            }
-            ref={CareMenu}
-          >
-            <div className={"flex flex-wrap gap-10"}>
-              {/*{data.navbar.subHousePlants.map((sub) => {*/}
-              {/*  return (*/}
-              {/*    <div*/}
-              {/*      className={"flex flex-col gap-3"}*/}
-              {/*      key={sub.header + "house"}*/}
-              {/*    >*/}
-              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
-              {/*      <ul>*/}
-              {/*        {sub.items.map((item) => {*/}
-              {/*          return (*/}
-              {/*            <li key={item.title}>*/}
-              {/*              <Link*/}
-              {/*                onClick={() => {*/}
-              {/*                  CloseMenu();*/}
-              {/*                }}*/}
-              {/*                href={"/" + data.lang + item.link}*/}
-              {/*              >*/}
-              {/*                {item.title}*/}
-              {/*              </Link>*/}
-              {/*            </li>*/}
-              {/*          );*/}
-              {/*        })}*/}
-              {/*      </ul>*/}
-              {/*    </div>*/}
-              {/*  );*/}
-              {/*})}*/}
-            </div>
-            <div>
-              <Image
-                src={"/assets/Images/navbar/nav-3.jpg"}
-                alt={"Pots"}
-                width={0}
-                height={0}
-                sizes={"100%"}
-                className={"w-auto h-auto min-w-[335px]"}
-              />
-            </div>
-          </div>
-          {/*Accessories menu*/}
-          <div
-            className={
-              "flex absolute top-[100%] w-full bg-white px-14 py-10 flex-row justify-evenly gap-10 duration-400 opacity-0 transition-all pointer-events-none"
-            }
-            ref={AccessoriesMenu}
-          >
-            <div className={"flex flex-wrap gap-10"}>
-              {/*{data.navbar.subHousePlants.map((sub) => {*/}
-              {/*  return (*/}
-              {/*    <div*/}
-              {/*      className={"flex flex-col gap-3"}*/}
-              {/*      key={sub.header + "house"}*/}
-              {/*    >*/}
-              {/*      <h3 className={"font-semibold underline"}>{sub.header}</h3>*/}
-              {/*      <ul>*/}
-              {/*        {sub.items.map((item) => {*/}
-              {/*          return (*/}
-              {/*            <li key={item.title}>*/}
-              {/*              <Link*/}
-              {/*                onClick={() => {*/}
-              {/*                  CloseMenu();*/}
-              {/*                }}*/}
-              {/*                href={"/" + data.lang + item.link}*/}
-              {/*              >*/}
-              {/*                {item.title}*/}
-              {/*              </Link>*/}
-              {/*            </li>*/}
-              {/*          );*/}
-              {/*        })}*/}
-              {/*      </ul>*/}
-              {/*    </div>*/}
-              {/*  );*/}
-              {/*})}*/}
-            </div>
-            <div>
-              <Image
-                src={"/assets/Images/navbar/nav-4.jpg"}
-                alt={"Pots"}
-                width={0}
-                height={0}
-                sizes={"100%"}
-                className={"w-auto h-auto min-w-[335px]"}
-              />
-            </div>
-          </div>
         </nav>
       </div>
-      {/*<div*/}
-      {/*  className={*/}
-      {/*    "absolute top-[113px] bg-opacity-0 border-white border-b-[0.75px] z-[2] "*/}
-      {/*  }*/}
-      {/*>*/}
-      {/*  Hello*/}
-      {/*</div>*/}
+      <div
+        className={
+          "fixed top-[140px] md:top-[93px] bg-opacity-[80%] border-white border-b-[0.75px] z-[2] w-full bg-secondary py-3 text-textColor"
+        }
+      >
+        <div
+          className={
+            "max-w-[1300px] w-full mx-auto flex flex-row justify-between px-5"
+          }
+        >
+          <span> مارا در شبکه های اجتماعی دنبال کنید.</span>
+          <div className={"flex flex-row gap-2 text-2xl"}>
+            <Link href={"https://instagram.com/anbareomomi"}>
+              <i className="fi fi-brands-instagram flex items-center"></i>
+            </Link>
+            <Link href={"https://t.me/+989056723180"}>
+              <i className="fi fi-brands-telegram flex items-center"></i>
+            </Link>
+            <Link href={"https://wa.me/+989056723180"}>
+              <i className="fi fi-brands-whatsapp flex items-center"></i>
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function TypesSlider() {
   return (
     // <div className=" lg:hidden">
     <div ref={sliderRef} className="keen-slider lg:hidden">
-      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[70%] keen-slider__slide px-10">
+      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[80%] keen-slider__slide px-10">
         <h2 className="text-3xl">انبار سوله ای مسقف</h2>
         <p className="text-justify">
           گاهی برای نگهداری تجهیزات و وسایل مهم و گران قیمت کارخانه ای نیاز به
@@ -27,7 +27,7 @@ export default function TypesSlider() {
           اجاره می شود.
         </p>
       </div>
-      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[70%] keen-slider__slide px-10">
+      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[80%] keen-slider__slide px-10">
         <h2 className="text-3xl"> کانتینر کولردار و سردخانه</h2>
         <p className="text-justify">
           امروزه به دلیل گسترش کارها نیاز به اجاره انبار در تمامی صتف ها و مشاغل
@@ -36,7 +36,7 @@ export default function TypesSlider() {
           از کالاها از انبارهای سردخانه ای استفاده کرد.
         </p>
       </div>
-      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[70%] keen-slider__slide px-10">
+      <div className="flex lg:hidden flex-col gap-6 justify-center items-center opacity-[80%] keen-slider__slide px-10">
         <h2 className="text-3xl"> انبار کانتینری</h2>
         <p className="text-justify">
           کانتیرها در مدل های 20 و 40 فوتی با پوشش فلزی و ارتفاع 2.5 متر از کف و

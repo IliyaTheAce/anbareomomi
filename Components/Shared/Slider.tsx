@@ -2,7 +2,7 @@
 
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function Slider({
   slides,
@@ -10,7 +10,7 @@ export default function Slider({
   buttons,
   loop,
 }: {
-  slides: string[];
+  slides: string[] | StaticImageData[];
   dots?: boolean;
   buttons?: boolean;
   loop?: boolean;
@@ -58,6 +58,7 @@ export default function Slider({
             alt={index + "slider"}
             fill
             className="h-auto object-cover"
+            placeholder={"blur"}
           />
         </div>
       ))}

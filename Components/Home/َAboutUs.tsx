@@ -10,7 +10,7 @@ export default function AboutUs() {
       <div className={"flex gap-10 flex-col"}>
         <h2
           className={
-            "text-4xl text-secondary text-right  border-b-2 border-b-primary pb-5 w-[70%]"
+            "text-2xl md:text-3xl lg:text-4xl text-secondary text-right  border-b-2 border-b-primary pb-5 w-[70%]"
           }
         >
           درباره آرتا
