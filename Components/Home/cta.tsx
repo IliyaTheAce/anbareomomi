@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function page({ items }: { items: string[] }) {
+export default function Page({ items }: { items: string[] }) {
   const [dropdown, setDropdown] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
@@ -39,7 +39,7 @@ export default function page({ items }: { items: string[] }) {
         <div ref={sliderRef} className="keen-slider">
           {items.map((item) => {
             return (
-              <div className="keen-slider__slide">
+              <div className="keen-slider__slide" key={item}>
                 <Image
                   src={item}
                   alt={"slider"}
