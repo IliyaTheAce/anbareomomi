@@ -90,7 +90,7 @@ export default async function Page({ params }: { params: { url: string } }) {
         {data.RelatedLinks.length > 0 && (
           <>
             <h4 className="text-xl text-right w-full">مطالب مرتبط</h4>
-            <div className="flex flex-col gap-3 items-start w-full px-5 md:px-8 lg:px-14 text-secondary pb-10 px-10">
+            <div className="flex flex-col gap-3 items-start w-full md:px-8 lg:px-14 text-secondary pb-10 px-10">
               {data.RelatedLinks.map(
                 (related: { link: string; linkTitle: string }) => {
                   return (

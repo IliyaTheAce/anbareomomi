@@ -22,7 +22,7 @@ export default function AboutUs() {
           میباشد.
         </p>
       </div>
-      <div className="items-center justify-center text-textColor bg-primary animate-pulse text-xl p-10 rounded-xl text-center grid grid-cols-1 lg:grid-cols-2">
+      <div className="items-center justify-center text-secondary bg-primary animate-pulse text-xl p-10 rounded-xl text-center grid grid-cols-1 lg:grid-cols-2">
         <div className={"text-lg  flex flex-row gap-2 text-right items-center"}>
           <i className="fi fi-rr-calendar-day flex items-center"></i>
           <span> عضو رسمی اتحادیه انبارداران</span>

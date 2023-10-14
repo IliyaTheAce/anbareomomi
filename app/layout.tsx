@@ -13,15 +13,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
-    images: "/assets/Images/arta-white.png",
+    images: "/assets/Images/Hero.jpg",
   },
   creator: "09112079676 - Iliya farhadi",
   colorScheme: "light dark",
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
-  },
+  alternates: { languages: { fa: "/" } },
+  // formatDetection: {
+  //   telephone: true,
+  //   email: true,
+  //   address: true,
+  // },
 };
 export default async function RootLayout({
   children,
@@ -50,6 +51,11 @@ export default async function RootLayout({
   gtag('js', new Date());
 
   gtag('config', 'G-MK3ELF3N0Y');`}
+        </Script>
+        <Script id="goftino" type="text/javascript">
+          {
+            'if(window && document){!function(){var i="MwWBpv",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();}'
+          }
         </Script>
         <NavBar navbarLinks={navbarData} />
         <main className="mt-[140px] md:mt-[93px] relative">{children}</main>

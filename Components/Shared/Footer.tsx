@@ -19,7 +19,7 @@ function Footer() {
           className={"h-auto"}
         />
       </Link>
-      <h4>شعبه مرکزی تهران</h4>
+      <span>شعبه مرکزی تهران</span>
     </div>,
     <div key="map-2" className={"flex flex-col gap-2 items-center"}>
       <Link
@@ -35,7 +35,7 @@ function Footer() {
           className={"h-auto"}
         />
       </Link>
-      <h4>شعبه دوم تهران</h4>
+      <span>شعبه دوم تهران</span>
     </div>,
     <div key="map-3" className={"flex flex-col gap-2 items-center"}>
       <Link
@@ -51,7 +51,7 @@ function Footer() {
           className={"h-auto"}
         />
       </Link>
-      <h4>شعبه سوم کرج ( اشتهارد)</h4>
+      <span>شعبه سوم کرج ( اشتهارد)</span>
     </div>,
     <div key="map-4" className={"flex flex-col gap-2 items-center"}>
       <Link
@@ -67,7 +67,7 @@ function Footer() {
           className={"h-auto"}
         />
       </Link>
-      <h4>شعبه چهارم ( سه راه شهریار)</h4>
+      <span>شعبه چهارم ( سه راه شهریار)</span>
     </div>,
   ];
   return (
@@ -92,7 +92,7 @@ function Footer() {
               className={"h-auto"}
             />
           </Link>
-          <h4>شعبه مرکزی تهران</h4>
+          <span>شعبه مرکزی تهران</span>
         </div>
         <div
           key="map-2"
@@ -113,7 +113,7 @@ function Footer() {
               className={"h-auto"}
             />
           </Link>
-          <h4>شعبه دوم تهران</h4>
+          <span>شعبه دوم تهران</span>
         </div>
         <div
           key="map-3"
@@ -134,7 +134,7 @@ function Footer() {
               className={"h-auto"}
             />
           </Link>
-          <h4>شعبه سوم کرج ( اشتهارد)</h4>
+          <span>شعبه سوم کرج ( اشتهارد)</span>
         </div>
 
         <div
@@ -156,7 +156,7 @@ function Footer() {
               className={"h-auto"}
             />
           </Link>
-          <h4>شعبه چهارم ( سه راه شهریار)</h4>
+          <span>شعبه چهارم ( سه راه شهریار)</span>
         </div>
       </div>
       <section
@@ -180,10 +180,11 @@ function Footer() {
               width={263}
               height={80}
             />
-            <div className={"text-xl text-center"}>
-              جهت اطلاع از هزینه ها و خدمات آرتا با{" "}
+            <div className={"text-xl text-center font-IranSans"}>
+              جهت اطلاع از هزینه ها و خدمات آرتا با
               <Link href={"tel:+989056723180"} target="_blank">
-                09056723180
+                {" "}
+                09056723180{" "}
               </Link>
               تماس حاصل نمایید
             </div>
