@@ -15,12 +15,12 @@ export default function InfoCard({
         <i
           className={
             icon +
-            " text-8xl text-primary w-full text-center flex items-center justify-center mb-3"
+            " text-[4rem] text-primary w-full text-center flex items-center justify-center mb-3"
           }
         ></i>
       )}
-      <h3 className={"text-2xl text-primary text-center w-full"}>{title}</h3>
-      <p className={"text-lg text-dimText text-center"}>{description}</p>
+      <h3 className={"text-[1.2rem] text-primary text-center w-full"}>{title}</h3>
+      <p className={"text-md text-dimText text-center"}>{description}</p>
     </div>
   );
 }

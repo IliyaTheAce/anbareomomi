@@ -57,6 +57,18 @@ export default async function RootLayout({
             'if(window && document){!function(){var i="MwWBpv",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();}'
           }
         </Script>
+        <Script type="application/ld+json" id='Schema'>
+          {`"@context: "https://schema.org/",
+  "@type": "WebSite",
+  "name": "انبا ر های زنجیره ای آرتا",
+  "url": "https://anbareomomi.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+  `}
+        </Script>
         <NavBar navbarLinks={navbarData} />
         <main className="mt-[140px] md:mt-[93px] relative">{children}</main>
         <Footer />
