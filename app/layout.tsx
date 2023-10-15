@@ -35,6 +35,7 @@ export default async function RootLayout({
       Authorization:
         "Bearer cdb40e6443b8a128dbeecc039edb54ccc2ed1795b8fe334af9cfaa6471acf6b86c43950afe9c72cd1ff728131573fea434886c3beb285593d3c1f1b8f0e1a750cd51d9c4a174f8d7fc53179bb05da08032b37c52a01e533b4b85e242ff38e3e7e27c8f23d4c89bf684514935318a530fc6c12284c988794f7557aaaa68b4f4df",
     },
+    next: { revalidate: 1800 },
   });
   const data = await result.json();
   const navbarData = data.data.attributes.items;
@@ -57,7 +58,7 @@ export default async function RootLayout({
             'if(window && document){!function(){var i="MwWBpv",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();}'
           }
         </Script>
-        <Script type="application/ld+json" id='Schema'>
+        <Script type="application/ld+json" id="Schema">
           {`"@context: "https://schema.org/",
   "@type": "WebSite",
   "name": "انبا ر های زنجیره ای آرتا",
