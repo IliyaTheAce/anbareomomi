@@ -59,7 +59,8 @@ export default async function RootLayout({
           }
         </Script>
         <Script type="application/ld+json" id="Schema">
-          {`"@context: "https://schema.org/",
+          {`{
+  "@context": "https://schema.org/",
   "@type": "WebSite",
   "name": "انبا ر های زنجیره ای آرتا",
   "url": "https://anbareomomi.com",
@@ -68,7 +69,7 @@ export default async function RootLayout({
     "target": "{search_term_string}",
     "query-input": "required name=search_term_string"
   }
-  `}
+}`}
         </Script>
         <NavBar navbarLinks={navbarData} />
         <main className="mt-[140px] md:mt-[93px] relative">{children}</main>
