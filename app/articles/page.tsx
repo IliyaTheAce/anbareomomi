@@ -2,7 +2,6 @@
 import { Pagination } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 type ResultType = {
   data: [
@@ -24,7 +23,6 @@ type ResultType = {
   };
 };
 const Articles = () => {
-  const navigate = useRouter();
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState<ResultType>();
   const [page, setPage] = useState(1);
