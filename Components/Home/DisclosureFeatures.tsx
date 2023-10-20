@@ -3,7 +3,9 @@ import { Disclosure, Transition } from "@headlessui/react";
 
 function DisclosureFeatures() {
   return (
-    <div className={"grid grid-cols-1 lg:grid-cols-2  gap-3 flex-col w-full"}>
+    <div
+      className={"grid grid-cols-1 lg:grid-cols-2  gap-3 flex-col w-full px-5"}
+    >
       <div className="flex flex-col gap-3 ">
         <Disclosure>
           <Disclosure.Button
