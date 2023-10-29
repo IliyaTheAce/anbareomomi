@@ -3,7 +3,6 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
 import Image, { StaticImageData } from "next/image";
-
 export default function Slider({
 	slides,
 	dots,
@@ -17,9 +16,9 @@ export default function Slider({
 }) {
 	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
 		{
-			slideChanged() {
-				console.log("slide changed");
-			},
+			// slideChanged() {
+			// 	console.log("slide changed");
+			// },
 			drag: true,
 			loop: true,
 			rtl: true,

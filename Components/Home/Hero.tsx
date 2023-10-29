@@ -1,7 +1,7 @@
+import slider_1 from "@/public/assets/Images/Hero/hero-1.jpg";
+import slider_2 from "@/public/assets/Images/Hero/hero-2.jpg";
 import BigButton from "../Shared/BigButton";
 import Slider from "../Shared/Slider";
-import slider_1 from "@/public/assets/Images/Hero.jpg";
-import slider_2 from "@/public/assets/Images/Hero2.jpg";
 export default function Hero() {
 	return (
 		<section className="w-full overflow-y-visible flex justify-start items-start flex-col relative lg:h-[75%] ">
