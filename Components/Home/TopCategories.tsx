@@ -45,13 +45,13 @@ export default async function TopCategories() {
 			content:
 				"پایتخت ایران تهران هر لحظه در تهدید زلزله شدید می باشد، اگر مسافر هستید اثاثیه منزل خود را در صندوق ضد زلزله، ضد آتش سوزی و ضد سرقت ما با کمترین هزینه و بدون هیچ گونه نگرانی تحت پوشش بیمه ایران و تحت ضمانت بانک پارسیان قرار دهید",
 		},
-		{
-			image: "/assets/Images/Services/asasie.png",
-			id: "7",
-			title: "بسته بندی اثاثیه",
-			content:
-				"شرکت آرتا با بهره گیری از بهترین تجهیزات و مجرب ترین پرسنل با کمترین هزینه اثاثیه یا سایر کالاهای شما را بسته بندی و به انبار های آرتا انتقال می دهد",
-		},
+		// {
+		// 	image: "/assets/Images/Services/asasie.png",
+		// 	id: "7",
+		// 	title: "بسته بندی اثاثیه",
+		// 	content:
+		// 		"شرکت آرتا با بهره گیری از بهترین تجهیزات و مجرب ترین پرسنل با کمترین هزینه اثاثیه یا سایر کالاهای شما را بسته بندی و به انبار های آرتا انتقال می دهد",
+		// },
 		{
 			image: "/assets/Images/Services/8.jpg",
 			id: "8",
@@ -73,7 +73,7 @@ export default async function TopCategories() {
 				className={`w-full lg:w-[70%] text-center font-bold text-2xl md:text-3xl lg:text-4xl font-Yekan border-b-2 border-b-primary pb-5 text-secondary`}>
 				خدمات تخصصی انبارهای عمومی آرتا
 			</h2>
-			<div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 max-w-[1270px] overflow-hidden">
+			<div className="grid lg:grid-cols-4 grid-cols-2 gap-2 md:gap-6 max-w-[1270px] overflow-hidden">
 				{popularCategories.map((item) => {
 					return (
 						<div
