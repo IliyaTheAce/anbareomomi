@@ -2,69 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 @import "~@flaticon/flaticon-uicons/css/all/all";
-
 @font-face {
-  font-family: Yekan;
-  src: url("/assets/fonts/Yekan/Yekan.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Yekan/Yekan.woff2") format("woff2"),
-    url("/assets/fonts/Yekan/Yekan.woff") format("woff"),
-    url("/assets/fonts/Yekan/Yekan.ttf") format("truetype"),
-    url("/assets/fonts/Yekan/Yekan.svg#Yekan") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: Yekan;
+	src: url("/assets/fonts/Yekan/Yekan.eot?#iefix") format("embedded-opentype"),
+		url("/assets/fonts/Yekan/Yekan.woff2") format("woff2"),
+		url("/assets/fonts/Yekan/Yekan.woff") format("woff"),
+		url("/assets/fonts/Yekan/Yekan.ttf") format("truetype"),
+		url("/assets/fonts/Yekan/Yekan.svg#Yekan") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Poppins Regular"),
-    url("/assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Poppins Regular"),
+		url("/assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: IranSans;
-  src: url("/assets/fonts/Sans/sans.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Sans/sans.woff") format("woff"),
-    url("/assets/fonts/Sans/sans.ttf") format("truetype"),
-    url("/assets/fonts/Sans/sans.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: IranSans;
+	src: url("/assets/fonts/Sans/sans.eot?#iefix") format("embedded-opentype"),
+		url("/assets/fonts/Sans/sans.woff") format("woff"),
+		url("/assets/fonts/Sans/sans.ttf") format("truetype"),
+		url("/assets/fonts/Sans/sans.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: Yeseva;
-  src: url("/assets/font/Yesava/yeseva-one.woff2") format("woff2"),
-    url("/assets/font/Yesava/yeseva-one.woff") format("woff"),
-    url("/assets/font/Yesava/yeseva-one.ttf") format("ttf");
+	font-family: Yeseva;
+	src: url("/assets/font/Yesava/yeseva-one.woff2") format("woff2"),
+		url("/assets/font/Yesava/yeseva-one.woff") format("woff"),
+		url("/assets/font/Yesava/yeseva-one.ttf") format("ttf");
 }
 
 .font-Yeseva {
-  font-family: Yeseva, serif;
+	font-family: Yeseva, serif;
 }
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .dropMenuActive::after {
-  width: 24px;
-  height: 24px;
-  content: "";
-  display: block;
+	width: 24px;
+	height: 24px;
+	content: "";
+	display: block;
 
-  background-image: url("/assets/Images/downarrow.svg");
+	background-image: url("/assets/Images/downarrow.svg");
 }
 .dropMenuDeactive::after {
-  width: 24px;
-  height: 24px;
-  content: "";
-  display: block;
-  background-image: url("/assets/Images/uparrow.svg");
+	width: 24px;
+	height: 24px;
+	content: "";
+	display: block;
+	background-image: url("/assets/Images/uparrow.svg");
 }
 html {
-  font-family: Yekan;
+	font-family: Yekan;
 }
 
 .polygon-shape {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%);
 }

@@ -88,8 +88,13 @@ export default async function TopCategories() {
 								className="w-full h-auto z-[1] hover:scale-110 transition-all duration-400"
 							/>
 							<div className={"flex flex-col gap-4 mt-6 px-5 pb-5"}>
-								<h3 className={"text-[2rem] text-[#495057]"}>{item.title} </h3>
-								<p className={"text-[1.3rem] text-dimText text-justify"}>
+								<h3 className={"md:text-[1.7rem] text-[1.2rem] text-[#495057]"}>
+									{item.title}{" "}
+								</h3>
+								<p
+									className={
+										"md:text-[1rem] text-[0.75rem] text-dimText text-justify"
+									}>
 									{item.content}
 								</p>
 							</div>

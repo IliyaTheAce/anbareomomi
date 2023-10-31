@@ -1,8 +1,8 @@
-import NavBar from "@/Components/Shared/NavBar";
-import "./globals.css";
 import Footer from "@/Components/Shared/Footer";
+import NavBar from "@/Components/Shared/NavBar";
 import type { Metadata } from "next";
 import Script from "next/script";
+import "./globals.css";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://anbareomomi.com"),
