@@ -6,7 +6,7 @@ export default async function TopCategories() {
 		{
 			image: "/assets/Images/Services/1.jpg",
 			id: "1",
-			title: "اجاره انواع کانتینر 20 و 40 فوتی",
+			title: "اجاره انواع کانتینر",
 			content:
 				"با انبار های زنجیره ای آرتا کالاهای خود را در امن ترین شرایط نگهداری کنید،انبار های کانتینری ارزان ترین و ایزوله و امن ترین محیط برای نگهداری انواع کالا و اثاثیه شما میباشد",
 		},
@@ -88,7 +88,10 @@ export default async function TopCategories() {
 								className="w-full h-auto z-[1] hover:scale-110 transition-all duration-400"
 							/>
 							<div className={"flex flex-col gap-4 mt-6 px-5 pb-5"}>
-								<h3 className={"md:text-[1.7rem] text-[1.2rem] text-[#495057]"}>
+								<h3
+									className={
+										"md:text-[1.4rem] text-[1.2rem] md:min-h-0 min-h-[58px] text-[#495057]"
+									}>
 									{item.title}{" "}
 								</h3>
 								<p

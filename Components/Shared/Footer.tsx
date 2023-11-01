@@ -147,11 +147,11 @@ function Footer() {
 			</div>
 			<section
 				className={
-					"bg-secondary w-full py-14 px-10 text-white flex flex-col  mt-5"
+					"bg-secondary w-full py-14 px-5 md:px-10 text-white flex flex-col  mt-5"
 				}>
 				<div
 					className={
-						"flex flex-col  justify-center max-w-[1200px] w-full mx-auto mt-5"
+						"flex lg:flex-row flex-col-reverse justify-center max-w-[1200px] w-full mx-auto mt-5"
 					}>
 					<div
 						className={
@@ -163,13 +163,58 @@ function Footer() {
 							width={263}
 							height={80}
 						/>
-						<div className={"text-xl text-center font-IranSans"}>
+						<div className={"text-sm text-center font-IranSans"}>
 							جهت اطلاع از هزینه ها و خدمات آرتا با
 							<Link href={"tel:+989056723180"} target="_blank">
-								{" "}
-								09056723180{" "}
+								09056723180
 							</Link>
 							تماس حاصل نمایید
+						</div>
+					</div>
+					<div className="items-center justify-start text-white text-xl p-10 rounded-xl text-right grid grid-cols-1 lg:grid-cols-2">
+						<div
+							className={
+								"text-lg  flex flex-row gap-2 text-right items-center"
+							}>
+							<i className="fi fi-rr-calendar-day flex items-center"></i>
+							<span> عضو رسمی اتحادیه انبارداران</span>
+						</div>
+						<div
+							className={
+								"text-lg  flex flex-row gap-2 text-right items-center"
+							}>
+							<i className="fi fi-rr-time-quarter-to flex items-center"></i>
+							<span> نگهبانی 24 ساعته تحت نظارت نیرو انتظامی</span>
+						</div>
+						<div className={"text-lg  flex flex-row gap-2 items-center"}>
+							<i className="fi fi-rr-camera-security flex  items-center"></i>
+							<span> دوربین مداربسته هوشمند</span>
+						</div>
+						<div className={"text-lg  flex flex-row gap-2 items-center"}>
+							<i className="fi fi-rr-camera-cctv flex items-center"></i>
+							<span> دوربین اختصاصی</span>
+						</div>
+						<div className={"text-lg  flex flex-row gap-2 items-center"}>
+							<i className="fi fi-rr-file-medical-alt flex items-center"></i>
+							<span> ارائه گزارش انبارداری</span>
+						</div>
+						<div className={"text-lg  flex flex-row gap-2 "}>
+							<i className="fi fi-rr-box-open flex items-center"></i>
+							<span> نصب گاو صندوق اختصاصی</span>
+						</div>
+						<div
+							className={
+								"text-lg  flex flex-row gap-2 items-center text-right"
+							}>
+							<i className="fi fi-rr-bank flex items-center"></i>
+							<span> ضمانت نامه بانکی (برای کالا خاص)</span>
+						</div>
+						<div
+							className={
+								"text-lg  flex flex-row gap-2 text-right items-center"
+							}>
+							<i className="fi fi-rr-shield-check flex items-center"></i>
+							<span> ضد زلزله، ضد آتش سوزی و ضد آب</span>
 						</div>
 					</div>
 					{/* <Sliders items={mapItems} /> */}
