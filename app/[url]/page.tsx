@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { notFound } from "next/navigation";
+import "@/Components/Styles/Articles.css";
 import { Metadata, ResolvingMetadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata(
 	{ params }: { params: { url: string } },

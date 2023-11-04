@@ -1,9 +1,8 @@
 "use client";
+import { Dropdown } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Dropdown } from "flowbite-react";
-import { DropdownItem } from "flowbite-react/lib/esm/components/Dropdown/DropdownItem";
 export type Root = Array<{
 	title: string;
 	link: string;
@@ -138,7 +137,9 @@ export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
 												</Dropdown>
 											) : (
 												<Dropdown.Item key={secondLinks.link}>
-													<Link href={secondLinks.link}>
+													<Link
+														href={secondLinks.link}
+														onClick={() => setToggle(false)}>
 														{secondLinks.title}
 													</Link>
 												</Dropdown.Item>
@@ -149,6 +150,7 @@ export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
 									<Link
 										href={topLink.link}
 										key={topLink.link}
+										onClick={() => setToggle(false)}
 										className={"text-sm py-2 px-3"}>
 										{topLink.title}
 									</Link>
@@ -189,13 +191,25 @@ export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
 					}>
 					<span> مارا در شبکه های اجتماعی دنبال کنید.</span>
 					<div className={"flex flex-row gap-2 text-2xl"}>
-						<Link href={"https://instagram.com/anbareomomi"}>
+						<Link
+							href={"https://instagram.com/anbareomomi"}
+							className={
+								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+							}>
 							<i className="fi fi-brands-instagram flex items-center"></i>
 						</Link>
-						<Link href={"https://t.me/+989056723180"}>
+						<Link
+							href={"https://t.me/+989056723180"}
+							className={
+								"hover:text-primary hover:scale-[120%] transition-all duration-500"
+							}>
 							<i className="fi fi-brands-telegram flex items-center"></i>
 						</Link>
-						<Link href={"https://wa.me/+989056723180"}>
+						<Link
+							href={"https://wa.me/+989056723180"}
+							className={
+								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+							}>
 							<i className="fi fi-brands-whatsapp flex items-center"></i>
 						</Link>
 					</div>

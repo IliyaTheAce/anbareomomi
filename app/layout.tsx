@@ -1,9 +1,11 @@
 import Footer from "@/Components/Shared/Footer";
 import NavBar from "@/Components/Shared/NavBar";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
-
+export const viewport: Viewport = {
+	themeColor: "light dark",
+};
 export const metadata: Metadata = {
 	metadataBase: new URL("https://anbareomomi.com"),
 	title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
@@ -12,10 +14,9 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
-		images: "/assets/Images/Hero.jpg",
+		images: "/assets/Images/Hero/hero-2.jpg",
 	},
 	creator: "09112079676 - Iliya farhadi",
-	colorScheme: "light dark",
 	alternates: { languages: { fa: "/" } },
 };
 export default async function RootLayout({

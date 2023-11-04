@@ -79,7 +79,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-1.png"}
 							alt={"tehran central office location"}
-							width={260}
+							width={180}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -98,7 +98,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-2.png"}
 							alt={"tehran central office location"}
-							width={260}
+							width={180}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -117,7 +117,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-3.png"}
 							alt={"tehran central office location"}
-							width={260}
+							width={180}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -137,12 +137,29 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-4.png"}
 							alt={"tehran central office location"}
-							width={260}
+							width={180}
 							height={0}
 							className={"h-auto"}
 						/>
 					</Link>
 					<span>شعبه سه راه شهریار</span>
+				</div>
+
+				<div
+					key="map-5"
+					className={
+						"flex flex-col gap-2 items-center p-4 shadow-xl rounded-xl "
+					}>
+					<Link href={"https://maps.google.com/?q=35.748962,50.254086"}>
+						<Image
+							src={"/assets/Images/slider/map-5.png"}
+							alt={"Qazvin office location"}
+							width={180}
+							height={0}
+							className={"h-auto"}
+						/>
+					</Link>
+					<span>شعبه قزوین</span>
 				</div>
 			</div>
 			<section
