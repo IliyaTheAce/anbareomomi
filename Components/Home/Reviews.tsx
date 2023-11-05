@@ -3,13 +3,11 @@
 import reviewsBackground from "@/public/assets/Images/reviews-back.jpg";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Image from "next/image";
-export default function Reviews({
-	data,
-}: {
-	data: { id: number; composer: string; review: string }[];
-}) {
+
+type dataType = { id: number; composer: string; review: string }[];
+export default function Reviews({ data }: { data: dataType }) {
 	const FieldsClassName =
-		"px-3 py-2 rounded-lg border-[1px] border-primary bg-white outline-none w-full md:w-[50%]";
+		"px-3 py-2 rounded-lg border-[1px] border-primary bg-white outline-none w-full md:w-[50%] text-secondary";
 	return (
 		<section
 			className={
