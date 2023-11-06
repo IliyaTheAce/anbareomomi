@@ -26,7 +26,6 @@ export default async function Home() {
 			<Hero />
 			{/* <CTA items={[]} /> */}
 
-			<Stats />
 			<TopCategories />
 			<AboutUs />
 			<IntroSlider />
@@ -35,6 +34,7 @@ export default async function Home() {
 			<AnbarTypes />
 			<Features />
 			<Reviews data={reviewResult.data} />
+			<Stats />
 		</main>
 	);
 }
