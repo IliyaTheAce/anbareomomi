@@ -212,6 +212,13 @@ export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
 							}>
 							<i className="fi fi-brands-whatsapp flex items-center"></i>
 						</Link>
+						<Link
+							href={"https://www.linkedin.com/company/anbar-e-omomi-arta"}
+							className={
+								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+							}>
+							<i className="fi fi-brands-linkedin flex items-center"></i>
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -11,7 +11,7 @@ import TopCategories from "@/Components/Home/TopCategories";
 export default async function Home() {
 	const reviewResponce = await fetch(
 		new URL("reviews", process.env.NEXT_PUBLIC_API_BASE_URL),
-		{ next: { revalidate: 10 } }
+		{ next: { revalidate: 1800 } }
 	);
 	const reviewResult: {
 		status: "success" | "failed";

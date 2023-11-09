@@ -3,17 +3,17 @@ import Stat from "./Stat";
 const data = [
 	{
 		title: "تعداد شعب",
-		icon: "fi fi-ss-garage-open",
+		icon: "fi fi-ss-code-branch",
 		value: 6,
 	},
 	{
 		title: "مشتری فعال",
-		icon: "fi fi-ss-garage-open",
+		icon: "fi fi-ss-user",
 		value: 1124,
 	},
 	{
 		title: "کانتینر های ما",
-		icon: "fi fi-ss-garage-open",
+		icon: "fi fi-rs-truck-container",
 		value: 1500,
 	},
 	{
