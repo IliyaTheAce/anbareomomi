@@ -26,7 +26,7 @@ const data = [
 export default function Stats() {
 	return (
 		<section className="mt-5 bg-secondary">
-			<div className="mx-auto max-w-[1200px] w-full flex py-5 px-5 flex-col md:flex-row justify-evenly items-center">
+			<div className="mx-auto max-w-[1200px] w-full flex py-5 px-5 flex-col  md:flex-wrap md:flex-row justify-evenly items-center gap-2">
 				{data.map((item, index) => (
 					<Stat key={"stat-" + index} {...item} />
 				))}

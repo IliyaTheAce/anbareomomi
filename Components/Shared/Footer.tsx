@@ -5,7 +5,7 @@ import Stats from "../Home/Stats";
 function Footer() {
 	return (
 		<>
-			<div className="flex flex-wrap gap-4 w-full max-w-[1300px] mx-auto items-center justify-center  pt-10">
+			<div className="flex flex-wrap gap-4 w-full  mx-auto items-center justify-center  pt-10">
 				<div
 					key="map-1"
 					className={
@@ -18,7 +18,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-1.png"}
 							alt={"tehran central office location"}
-							width={180}
+							width={150}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -37,7 +37,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-2.png"}
 							alt={"tehran central office location"}
-							width={180}
+							width={150}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -56,7 +56,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-3.png"}
 							alt={"tehran central office location"}
-							width={180}
+							width={150}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -76,7 +76,7 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-4.png"}
 							alt={"tehran central office location"}
-							width={180}
+							width={150}
 							height={0}
 							className={"h-auto"}
 						/>
@@ -93,12 +93,31 @@ function Footer() {
 						<Image
 							src={"/assets/Images/slider/map-5.png"}
 							alt={"Qazvin office location"}
-							width={180}
+							width={150}
 							height={0}
 							className={"h-auto"}
 						/>
 					</Link>
 					<span>شعبه قزوین</span>
+				</div>
+				<div
+					key="map-6"
+					className={
+						"flex flex-col gap-2 items-center p-4 shadow-xl rounded-xl "
+					}>
+					<Link
+						href={
+							"https://www.google.com/maps/place/35%C2%B041'57.7%22N+50%C2%B019'01.7%22E/@35.6993638,50.3145625,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6993638!4d50.3171374?hl=en&entry=ttu"
+						}>
+						<Image
+							src={"/assets/Images/slider/map-6.png"}
+							alt={"Qazvin office location"}
+							width={150}
+							height={0}
+							className={"h-auto"}
+						/>
+					</Link>
+					<span>شعبه دوم اشتهارد</span>
 				</div>
 			</div>
 			<Stats />

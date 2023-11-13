@@ -27,7 +27,7 @@ export const brands = [
 	"/assets/brands/26.png",
 	"/assets/brands/27.png",
 	"/assets/brands/28.webp",
-	"/assets/brands/29.webp",
+	"/assets/brands/29.png",
 	"/assets/brands/30.svg",
 	"/assets/brands/31.png",
 	"/assets/brands/32.png",
