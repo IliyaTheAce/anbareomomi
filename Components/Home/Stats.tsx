@@ -25,10 +25,12 @@ const data = [
 
 export default function Stats() {
 	return (
-		<section className="w-full mx-auto max-w-[1200px] flex py-5 mt-5 px-5 flex-col md:flex-row justify-evenly items-center">
-			{data.map((item, index) => (
-				<Stat key={"stat-" + index} {...item} />
-			))}
+		<section className="mt-5 bg-secondary">
+			<div className="mx-auto max-w-[1200px] w-full flex py-5 px-5 flex-col md:flex-row justify-evenly items-center">
+				{data.map((item, index) => (
+					<Stat key={"stat-" + index} {...item} />
+				))}
+			</div>
 		</section>
 	);
 }

@@ -13,7 +13,7 @@ export default function Stat({
 	value: number;
 }) {
 	return (
-		<div className="flex flex-row gap-8 p-3">
+		<div className="flex flex-row gap-8 p-3 bg-white bg-opacity-10 rounded-lg">
 			<i
 				className={`flex justify-center items-center text-[4rem] text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#fcb072] ${icon}`}></i>
 			<div className="flex flex-col gap-1 justify-center items-center">
@@ -22,10 +22,10 @@ export default function Stat({
 					end={value}
 					delay={3}
 					duration={3}
-					className="font-IranSans text-[3rem] text-center text-primary min-w-[160px]"
+					className="font-IranSans text-[3rem] text-center text-white min-w-[160px]"
 					formattingFn={(num) => Intl.NumberFormat("fa-IR").format(num)}
 				/>
-				<span className="text-[0.7rem] text-center font-IranSans text-secondary opacity-70">
+				<span className="text-[0.7rem] text-center font-IranSans text-white opacity-70">
 					{title}
 				</span>
 			</div>

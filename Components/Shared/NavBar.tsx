@@ -194,28 +194,28 @@ export default function NavBar({ navbarLinks }: { navbarLinks: Root }) {
 						<Link
 							href={"https://instagram.com/anbareomomi"}
 							className={
-								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+								"hover:text-primary hover:scale-[120%] transition-all duration-500  animate-pulse"
 							}>
 							<i className="fi fi-brands-instagram flex items-center"></i>
 						</Link>
 						<Link
 							href={"https://t.me/+989056723180"}
 							className={
-								"hover:text-primary hover:scale-[120%] transition-all duration-500"
+								" hover:text-primary hover:scale-[120%] transition-all duration-500 delay-[600] animate-pulse"
 							}>
 							<i className="fi fi-brands-telegram flex items-center"></i>
 						</Link>
 						<Link
 							href={"https://wa.me/+989056723180"}
 							className={
-								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+								"hover:text-primary hover:scale-[120%] transition-all duration-500 delay-[1200] animate-pulse"
 							}>
 							<i className="fi fi-brands-whatsapp flex items-center"></i>
 						</Link>
 						<Link
 							href={"https://www.linkedin.com/company/anbar-e-omomi-arta"}
 							className={
-								"hover:text-primary hover:scale-[120%] transition-all duration-500 "
+								"hover:text-primary hover:scale-[120%] transition-all duration-500 delay-[1800] animate-pulse"
 							}>
 							<i className="fi fi-brands-linkedin flex items-center"></i>
 						</Link>
