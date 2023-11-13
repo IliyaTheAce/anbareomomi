@@ -6,6 +6,8 @@ import { IntroSlider } from "@/Components/Home/IntroSlider";
 import Reviews from "@/Components/Home/Reviews";
 import { Security } from "@/Components/Home/Security";
 import TopCategories from "@/Components/Home/TopCategories";
+import CTA from "@/Components/Home/cta";
+import { brands } from "@/Constants/brands";
 export default async function Home() {
 	const reviewResponce = await fetch(
 		new URL("reviews", process.env.NEXT_PUBLIC_API_BASE_URL),
@@ -22,7 +24,7 @@ export default async function Home() {
 	return (
 		<main className="bg-gray-100">
 			<Hero />
-			{/* <CTA items={brands} /> */}
+			<CTA items={brands} />
 
 			<TopCategories />
 			<AboutUs />
