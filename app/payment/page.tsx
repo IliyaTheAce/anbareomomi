@@ -30,7 +30,6 @@ export default function Payment() {
             storageNo,
             roofNo,
           } = values;
-          console.log(fileRef.current?.files);
           if (fileRef.current?.files && fileRef.current?.files.length <= 0) {
             actions.setErrors({
               firstName: "لطفا تصویر فاکتور را انتخاب کنید",

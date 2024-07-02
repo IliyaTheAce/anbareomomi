@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anbareomomi.com"),
+  metadataBase: new URL("https://ejarecantiner.com/"),
   title: "انبار های عمومی | کانتینر | انبار های زنجیره ای آرتا",
   description:
     "انبارهای عمومی | انبارهای زنجیره ای آرتا | خرید و فروش کانتینر ، اجاره سوله و سردخانه و انبار تجاری و وسایل منزل با بیش از ربع قرن تجربه",
@@ -21,7 +21,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const result = await fetch("https://panel.anbareomomi.com/api/navbar", {
+  const result = await fetch("https://panel.ejarecantiner.com//api/navbar", {
     method: "Get",
     headers: {
       Authorization:

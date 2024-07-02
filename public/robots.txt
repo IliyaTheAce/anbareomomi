@@ -1,4 +1,4 @@
-Sitemap:https://panel.anbareomomi.com/api/sitemap/index.xml
+Sitemap:https://panel.ejarecantiner.com/api/sitemap/index.xml
 
 User-agent: *
 Disallow: /api

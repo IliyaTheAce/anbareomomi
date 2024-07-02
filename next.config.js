@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "panel.anbareomomi.com",
+        hostname: "panel.ejarecantiner.com",
         protocol: "https",
       },
     ],
